@@ -1,0 +1,42 @@
+
+public class Main {
+	
+	static public void main (String[] args) {
+		int nbAlternatives = 5;
+		int[][] choix =
+			{ 
+			  {1, 1, 1}, {1, 2, 2}, {1, 3, 3}, {1, 4, 4}, {1, 5, 5},
+			  {1, 1, 3}, {1, 2, 2}, {1, 3, 5}, {1, 4, 1}, {1, 5, 4},
+			  {1, 1, 0}, {1, 2, 0}, {1, 3, 3}, {1, 4, 1}, {1, 5, 2},
+			  {1, 1, 4}, {1, 2, 0}, {1, 3, 1}, {1, 4, 2}, {1, 5, 3},
+			  {1, 1, 5}, {1, 2, 3}, {1, 3, 1}, {1, 4, 2}, {1, 5, 4},
+			  {1, 1, 0}, {1, 2, 1}, {1, 3, 0}, {1, 4, 0}, {1, 5, 2},
+			  {1, 1, 4}, {1, 2, 1}, {1, 3, 0}, {1, 4, 3}, {1, 5, 2},
+			  {1, 1, 1}, {1, 2, 2}, {1, 3, 5}, {1, 4, 4}, {1, 5, 3},
+			  {1, 1, 0}, {1, 2, 3}, {1, 3, 1}, {1, 4, 4}, {1, 5, 2},
+			  {1, 1, 5}, {1, 2, 3}, {1, 3, 1}, {1, 4, 4}, {1, 5, 2},
+			  {1, 1, 0}, {1, 2, 2}, {1, 3, 0}, {1, 4, 1}, {1, 5, 0}
+			};
+		int idVotant = choix[0][0];
+		
+		System.out.println(Integer.toString(choix[0][0]));
+		Voix voix = new Voix(idVotant, nbAlternatives);
+		Condorcet vote = new Condorcet(nbAlternatives);
+		
+		for (int i = 0; i < choix.length; i++) {
+			if (idVotant == choix[i][0]) {
+				voix.addChoix(choix[i%5][1], choix[i%5][2]);
+			}
+			else{
+				vote.addVoix(voix);
+				System.out.println(voix.toString());
+				idVotant=choix[i][0];
+				voix = new Voix(idVotant, nbAlternatives);
+			}
+		}
+		
+		System.out.println(voix.toString());
+		vote.addVoix(voix);	
+	}
+	
+}
