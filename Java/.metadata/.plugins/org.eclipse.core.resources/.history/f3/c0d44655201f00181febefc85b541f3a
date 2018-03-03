@@ -2,7 +2,7 @@
 public class Voix {
 	private int idVotant;
 	private int nbAlternatives;
-	private int[] classement; // classement[0] donne le rang de l'alternative 1 (les alternatives sont numérotées à partir de 1)
+	private int[] classement;
 	
  	public Voix(int idVotant, int nbAlternatives) {
  		this.idVotant = idVotant;

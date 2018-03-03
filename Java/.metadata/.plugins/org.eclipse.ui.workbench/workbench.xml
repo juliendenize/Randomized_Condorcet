@@ -36,17 +36,17 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/Main.java" title="Main.java" tooltip="Algortihme de Condorcet/src/Main.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Main.java" partName="Main.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/Main.java" title="Main.java" tooltip="Algortihme de Condorcet/src/Main.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/Main.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="633" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="358" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" partName="Condorcet.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/Condorcet.java" title="Condorcet.java" tooltip="Algortihme de Condorcet/src/Condorcet.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" partName="Condorcet.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/Condorcet.java" title="Condorcet.java" tooltip="Algortihme de Condorcet/src/Condorcet.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/Condorcet.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="533" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1039" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Voix.java" partName="Voix.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/Voix.java" title="Voix.java" tooltip="Algortihme de Condorcet/src/Voix.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/Voix.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="696" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="224" selectionOffset="469" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -85,8 +85,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -300,46 +299,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/Condorcet.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/Main.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/Voix.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/Main.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/Voix.java"/>
 </editors>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="1173" y="0"/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="939" y="0"/>
-</item>
-<item historyLabel="Condorcet.java" index="0">
-<position info="not_deleted" x="1221" y="0"/>
-</item>
-<item historyLabel="Voix.java" index="2">
-<position info="not_deleted" x="650" y="0"/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="939" y="0"/>
-</item>
-<item historyLabel="Condorcet.java" index="0">
-<position info="not_deleted" x="1221" y="0"/>
-</item>
-<item historyLabel="Voix.java" index="2">
-<position info="not_deleted" x="638" y="0"/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="939" y="0"/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="755" y="0"/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="791" y="0"/>
-</item>
-<item historyLabel="Voix.java" index="2">
-<position info="not_deleted" x="180" y="0"/>
-</item>
-<item historyLabel="Main.java" index="1">
-<position info="not_deleted" x="939" y="0"/>
-</item>
 <item historyLabel="Voix.java" index="2">
 <position info="not_deleted" x="328" y="36"/>
 </item>
@@ -448,8 +410,47 @@
 <item historyLabel="Main.java" index="1">
 <position info="not_deleted" x="633" y="0"/>
 </item>
-<item active="true" historyLabel="Condorcet.java" index="0">
+<item historyLabel="Condorcet.java" index="0">
 <position info="not_deleted" x="963" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="633" y="0"/>
+</item>
+<item historyLabel="Voix.java" index="4">
+<position info="not_deleted" x="693" y="0"/>
+</item>
+<item historyLabel="Condorcet.java" index="0">
+<position info="not_deleted" x="1039" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="1151" y="0"/>
+</item>
+<item historyLabel="Condorcet.java" index="0">
+<position info="not_deleted" x="1039" y="0"/>
+</item>
+<item historyLabel="Voix.java" index="4">
+<position info="not_deleted" x="693" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="1151" y="0"/>
+</item>
+<item historyLabel="Voix.java" index="4">
+<position info="not_deleted" x="693" y="0"/>
+</item>
+<item historyLabel="Main.java" index="3">
+<position info="not_deleted" x="1151" y="0"/>
+</item>
+<item historyLabel="Voix.java" index="4">
+<position info="not_deleted" x="693" y="0"/>
+</item>
+<item historyLabel="Condorcet.java" index="0">
+<position info="not_deleted" x="1039" y="0"/>
+</item>
+<item historyLabel="Voix.java" index="4">
+<position info="not_deleted" x="469" y="224"/>
+</item>
+<item active="true" historyLabel="Main.java" index="3">
+<position info="not_deleted" x="1151" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

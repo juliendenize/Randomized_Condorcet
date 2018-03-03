@@ -28,7 +28,7 @@ public class Main {
 				idVotant=choix[i][0];
 				voix = new Voix(idVotant, nbAlternatives);
 			}
-			voix.addChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
+			voix.addChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour initialiser le tableau de classement)
 		}
 		System.out.println(voix);
 		vote.addVoix(voix);	
