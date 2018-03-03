@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Condorcet {
+	private int nbAlternatives;
+	private LinkedList<Voix> toutesLesVoix;
+	private int[][] Compteur;
+	private int gagnant;
+	public Condorcet(int nbAlternatives) {
+		this.nbAlternatives = nbAlternatives;
+		
+	}
+	public void addVoix(Voix voix) {
+		this.toutesLesVoix.add(voix);
+	}
+
+}

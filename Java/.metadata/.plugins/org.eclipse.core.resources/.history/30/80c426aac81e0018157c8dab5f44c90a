@@ -1,0 +1,10 @@
+
+public class Voix {
+	private int[] classement;
+ 	public Voix(int nbAlternatives) {
+		classement = new int[nbAlternatives];
+	}
+ 	public void addChoix (int idAlternative, int rang) {
+ 		classement[idAlternative] = rang;
+ 	}
+}

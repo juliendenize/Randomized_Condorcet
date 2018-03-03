@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class Condorcet {
+	private int nbAlternatives;
+	private LinkedList<Voix> toutesLesVoix;
+	private int[][] compteur;
+	private int gagnant;
+	public Condorcet(int nbAlternatives) {
+		this.nbAlternatives = nbAlternatives;
+		this.compteur = new int[this.nbAlternatives][this.nbAlternatives];
+		this.gagnant = 0;
+		this.toutesLesVoix = new LinkedList<Voix>();
+	}
+	public void addVoix(Voix voix) {
+		this.toutesLesVoix.add(voix);
+	}
+	public void parcoursVoix() {
+		for (Voix cur: toutesLesVoix) {
+			for (int i = 0; i < nbAlternatives; i++) {
+				for (int j = 0; j < nbAlternatives; j++) {
+					
+				}
+			}
+		}
+	}
+	public String toString() {
+		return "Election avec " + Integer.toString(nbAlternatives) + " alternatives et le gagnat est " + Integer.toString(gagnant);
+	}
+
+}
