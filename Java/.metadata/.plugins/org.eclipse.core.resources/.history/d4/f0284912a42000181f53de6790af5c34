@@ -1,0 +1,19 @@
+
+public class VoixAleatoire {
+	private int nbAlternatives;
+	private int[] rangAlternatives;
+	
+	public VoixAleatoire(int nbAlternatives) {
+		this.nbAlternatives = nbAlternatives;
+		generationRang();
+	}
+	
+	public void generationRang() {
+		this.rangAlternatives = new int[nbAlternatives];
+		int indiceAléatoire;
+		for (int i = 0; i < nbAlternatives; i++) {
+			indiceAléatoire = (int)(Math.random()*nbAlternatives);
+			rangAlternatives[indiceAléatoire] = i+1;
+		}
+	}
+}

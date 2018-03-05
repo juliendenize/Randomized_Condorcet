@@ -4,12 +4,12 @@ public class Condorcet {
 	private int nbAlternatives;
 	private LinkedList<Voix> toutesLesVoix; // Toutes les voix (donc chaque votant) seront ajoutées dans cette liste
 	private int[][] compteur;
-	private int gagnant; // A la fin contiendra le numéro de l'alternative gagnante
+	private int vainqueur; // A la fin contiendra le numéro de l'alternative gagnante
 	
 	public Condorcet(int nbAlternatives) {
 		this.nbAlternatives = nbAlternatives;
 		this.compteur = new int[nbAlternatives][nbAlternatives];
-		this.gagnant = 0;
+		this.vainqueur = 0;
 		this.toutesLesVoix = new LinkedList<Voix>();
 	}
 	
@@ -23,7 +23,7 @@ public class Condorcet {
 				if (cur.rangAlternative(i) != 0) {
 					for (int j = i+1; j < nbAlternatives; j++) {
 						if (cur.rangAlternative(j) != 0) {
-							if (cur.rangAlternative(i) < cur.rangAlternative(j)) compteur[j][i] += 1; // On augmente d'un le score de l'alternative j par rapport à i car elle est mieux classée
+							if (cur.rangAlternative(i) > cur.rangAlternative(j)) compteur[j][i] += 1; // On augmente d'un le score de l'alternative i par rapport à j car elle est mieux classée
 							else compteur[i][j] +=1;
 						}
 					}
@@ -42,7 +42,7 @@ public class Condorcet {
 	}
 	
 	public String toString() { // A redéfinir la méthode toString pour Condorcet
-		return "Election avec " + Integer.toString(nbAlternatives) + " alternatives et le gagnant est " + Integer.toString(gagnant);
+		return "Election avec " + Integer.toString(nbAlternatives) + " alternatives et le gagnant est " + Integer.toString(vainqueur);
 	}
 
 }
