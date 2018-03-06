@@ -1,5 +1,16 @@
-
+/**
+ * <p><b>La classe Test permet d'effectuer des tests sans avoir à modifier beaucoup de code dans le main.</b>
+ * Elle ne contient que des méthodes.</p>
+ * <br>
+ * @author julien
+ */
 public class Test {
+	
+	/**
+	 * Teste la classe VoixAleatoire en créant plusieurs instances et en les affichant.<br>
+	 * @see VoixAleatoire
+	 * @see VoixAleatoire#toString()
+	 */
 	public void testVoixAleatoire() {
 		int nbVotes = 1;
 		int nbAlternatives = 5;
@@ -10,11 +21,27 @@ public class Test {
 		}
 	}
 	
+	/**
+	 * <b>Teste la classe Condorcet et Voix.</b><br>
+	 * La méthode contient un tableau choix représentant chaque choix sous la forme: le votant, l'alternative et le rang.<br>
+	 * Elle construit pour chaque votant une voix et on l'ajoute à une instance de Condorcet.<br>
+	 * Elle lit le tableau compteur de l'instance de Condorcet qui si tout va bien affiche ce qui suit:<br>
+	 *  0 2 3 2 3<br>
+	 *  4 0 3 5 6<br>
+	 *  3 3 0 5 5<br>
+	 *  5 2 3 0 5<br>
+	 *  4 2 3 4 0<br>
+	 *  @see Condorcet
+	 *  @see Voix
+	 *  @see Voix#addChoix(int, int)
+	 *  @see Condorcet#addVoix(Voix)
+	 *  @see Condorcet#lectureCompteur()
+	 */
 	public void testCondorcet() {
 		int nbAlternatives = 5;
-		int[][] choix = // Contient tous les classements des alternatives de tous les votants
+		int[][] choix =
 			{ 
-			  {1, 1, 1}, {1, 2, 2}, {1, 3, 3}, {1, 4, 4}, {1, 5, 5}, //idVotant, idAlternative, rang
+			  {1, 1, 1}, {1, 2, 2}, {1, 3, 3}, {1, 4, 4}, {1, 5, 5},
 			  
 			  {2, 1, 3}, {2, 2, 2}, {2, 3, 5}, {2, 4, 1}, {2, 5, 4},
 			  
@@ -37,11 +64,11 @@ public class Test {
 		int idVotant = choix[0][0];
 		
 		Voix voix = new Voix(idVotant, nbAlternatives);
-		Condorcet vote = new Condorcet(nbAlternatives);
+		Condorcet election = new Condorcet(nbAlternatives);
 		
-		for (int i = 0; i < choix.length; i++) { // Pour chaque votant on créé une voix pour récupérer le classement qu'ils ont voulu
+		for (int i = 0; i < choix.length; i++) {
 			if (idVotant != choix[i][0]) {
-				vote.addVoix(voix);
+				election.addVoix(voix);
 				System.out.println(voix);
 				idVotant=choix[i][0];
 				voix = new Voix(idVotant, nbAlternatives);
@@ -49,12 +76,8 @@ public class Test {
 			voix.addChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
 		}
 		System.out.println(voix);
-		vote.addVoix(voix);	
-		vote.parcoursVoix();
-		vote.lectureCompteur(); // 0 2 3 2 3  Valeur que lecture compteur doit affiché
-								// 4 0 3 5 6
-								// 3 3 0 5 5
-								// 5 2 3 0 5
-								// 4 2 3 4 0
+		election.addVoix(voix);	
+		election.parcoursVoix();
+		election.lectureCompteur();
 	}
 }
