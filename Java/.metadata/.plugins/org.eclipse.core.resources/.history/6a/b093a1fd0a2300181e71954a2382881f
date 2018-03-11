@@ -1,0 +1,14 @@
+
+/**
+ * <b>L'interface Ballot permet de créer des voix qui soient aléatoires ou non.</b><br> 
+ * Le but est d'avoir une connexion entre les classes Voix et VoixAleatoire pour que la classe Condorcet puisse se servir des deux.<br>
+ * @author julien
+ * @see Voix
+ * @see VoixAleatoire
+ * @see Condorcet
+ */
+
+public interface Ballot {
+	public int rangAlternative(int idAlternative);
+	public String toString();
+}

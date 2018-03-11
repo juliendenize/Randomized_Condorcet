@@ -1,6 +1,6 @@
 /**
  * <p><b>La classe VoixAleatoire représente la voix généré aléatoirement avec un idVotant pour la rendre unique.</b><br>
- * Elle est définie par:
+ * Elle est une classe fille de Voix et est définie par:
  * <ul>
  * 	<li>L'ID du votant représenté par la voix.</li>
  * 	<li>Le nombre d'alternatives du vote.</li>
@@ -9,40 +9,23 @@
  * </p><br>
  * @author julien
  */
-public class VoixAleatoire {
-	
-	/**
-	 * L'ID du votant représenté par la voix. Cet ID n'est pas modifiable.
-	 */
-	private int idVotant;
-	
-	/**
-	 * Le nombre d'alternatives du vote. Ce nombre n'est pas modifiable.
-	 */
-	private int nbAlternatives;
-	
-	/**
-	 * Classement des alternatives. Ce classement n'est pas modifiable.<br>
-	 * rangAlternatives[i] donne le rang de l'alternative i selon le classement du votant.<br>
-	 * 
-	 * @see Voix#rangAlternative
-	 */
-	private int[] rangAlternatives;
-	
+public class VoixAleatoire extends Voix {
+		
 	/**
 	 * Constructeur VoixAleatoire.
 	 * <p>
-	 * 	A la construction d'un objet Voix, l'idVotant et nbAlternatives sont fixées.<br>
-	 * 	rangAlternatives est  dans la méthode {@link VoixAleatoire#generationRang()}.
+	 * 	A la construction d'un objet Voix, l'idVotant et nbAlternatives sont fixées par le constructeur de ballot.<br>
+	 * 	La génération de rangAlternatives est dans la méthode {@link VoixAleatoire#generationRang()}.
 	 * </p><br>
-	 * @param idVotant L'ID du votant.
-	 * @param nbAlternatives Le nombre d'alternatives du vote.
-	 * @see VoixAleatoire#idVotant
-	 * @see VoixAleatoire#nbAlternatives
+	 * @param idVotant 
+	 * 				L'ID du votant.
+	 * @param nbAlternatives 
+	 * 				Le nombre d'alternatives du vote.
+	 * @see Voix#Voix(int, int)
+	 * @see VoixAleatoire#generationRang()
 	 */
 	public VoixAleatoire(int idVotant, int nbAlternatives) {
-		this.idVotant = idVotant;
-		this.nbAlternatives = nbAlternatives;
+		super(idVotant, nbAlternatives);
 		generationRang();
 	}
 	
@@ -54,7 +37,7 @@ public class VoixAleatoire {
 	 * <ul>
 	 * 	<li>Génère un nombre aléatoire compris dans l'intervalle [0, pioche[0]].</li>
 	 * 	<li>On remplit rangAlternatives[pioche[0]-1] suivant le nbAleatoire:
-	 * 			<p><b>&nbsp;si nbAleatoire = 0: 0</b>  et on perd donc le rang représenté par pioche[pioche[0]].<br>
+	 * 			<p><b>si nbAleatoire = 0: 0</b>  et on perd donc le rang représenté par pioche[pioche[0]].<br>
 	 * 			<b>	si nbAleatoire = pioche[0]: pioche[nbAleatoire]</b>.<br>
 	 * 			<b>	sinon: pioche[nbAleatoire] et pioche[nbAleatoire] = pioche[pioche[0]]</b> afin de garder le rang qui n'a pas été tiré.<br></p>
 	 * 		Dans le cas où nbAleatoire = 0 comme on décrémente ensuite pioche[0] on perd le rang représenté par pioche[pioche[0]]</li>
@@ -66,8 +49,7 @@ public class VoixAleatoire {
 	 *  @see Condorcet#parcoursVoix()
 	 */
 	public void generationRang() {
-		this.rangAlternatives = new int[nbAlternatives];
-		int nbAleatoire;
+		int nbAleatoire = 0;
 		int[] pioche = new int[nbAlternatives + 1];
 		
 		for (int i = 1; i < nbAlternatives + 1; i++) {
@@ -88,7 +70,7 @@ public class VoixAleatoire {
 			}
 		}
 	}
-
+	
  	/**
  	 * Comportement d'un objet VoixAleatoire sous la forme d'une chaine de caractère.
  	 * Renvoie l'ID du votant et le classement des alternatives. <br>

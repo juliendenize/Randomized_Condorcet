@@ -1,0 +1,7 @@
+
+public interface ballot {
+	int idvotant;
+	int nbAlternatives;
+	int[] rangAlternatives;
+	public int rangAlternative();
+}

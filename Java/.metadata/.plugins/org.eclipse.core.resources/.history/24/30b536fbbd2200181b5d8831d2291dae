@@ -1,0 +1,12 @@
+
+/**
+ * L'interface Ballot
+ * @author julien
+ *
+ */
+
+public interface ballot {
+	public int rangAlternative(int idAlternative);
+	public String toString();
+	
+}

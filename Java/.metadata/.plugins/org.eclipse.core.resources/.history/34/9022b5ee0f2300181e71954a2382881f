@@ -1,0 +1,106 @@
+import java.util.Vector;
+
+/**
+ * <p><b>La classe Graphe représente le graphe orienté engendré par les résultats des matchs d'une instance de Condorcet.</b><br>
+ * Elle est définie par:
+ * <ul>
+ * 	<li>Le nombre de noeuds du graphe.</li>
+ * 	<li>La matrice d'adjancence du graphe.</li>
+ * 	<li>
+ * </ul>
+ * </p><br>
+ * @author julien
+ */
+public class Graphe {
+	
+	/**
+	 * Nombre de noeuds du graphe. Ce nombre n'est pas modifiable.
+	 */
+	private int nbNoeuds;
+	
+	/**
+	 * Représente la matrice d'adjacence du graphe orienté: si matrice[0][1] = 1 alors 1 pointe vers 0 sinon si matrice[0][1] = 0.<br>
+	 * Cette matrice n'est pas modifiable.
+	 */
+	private int[][] matrice;
+	
+	/**
+	 * Constructeur de Graphe
+	 * @param nbAlternatives
+	 * 					Le nombre d'Alternatives de l'élection que le graphe doit résoudre
+	 * @param compteur
+	 * 					Le compteur des résultats des matchs sur toutes les voix de l'élection
+	 * @see Condorcet
+	 */
+	public Graphe(int nbAlternatives, int[][] compteur) {
+		this.nbNoeuds = nbAlternatives;
+		generationMatrice(compteur);
+	}
+	
+	/**
+	 * <b>Génère la matrice.</b><br>
+	 * La méthode compare si pour chaque alternative i et j avec i != j, i a gagné plus de match par rapport à j.
+	 * Lorsque c'est le cas on met un dans la matrice dans la case matrice[j][i].
+	 * Si ils ont gagné autant de match on laisse à zéro.<br>
+	 * @param compteur
+	 * 				Le compteur de matchs passé au constructeur.
+	 * @see Graphe#Graphe(int, int[][])
+	 */
+	public void generationMatrice(int [][] compteur) {
+		this.matrice = new int[nbNoeuds][nbNoeuds];
+		for (int i = 0; i < nbNoeuds; i++) {
+			for (int j = i + 1; j < nbNoeuds; j++) {
+				if(compteur[i][j] > compteur[j][i]) {
+					matrice[i][j] = 1;
+				}
+				else if (compteur[i][j] < compteur[j][i]) {
+					matrice[j][i] = 1;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Lecture de la matrice.<br>
+	 * @see Graphe#matrice
+	 */
+	public void lectureMatrice() {
+		for (int i = 0; i < nbNoeuds; i++) {
+			for (int j = 0; j < nbNoeuds; j++) {
+				System.out.print(Integer.toString(matrice[i][j]) + " ");
+			}
+			System.out.print("\n");
+		} 
+	}
+	
+	/**
+	 * <b>Renvoie le vainqueur de Condorcet si il existe.</b><br>
+	 * Si un candidat i bat tous les autres candidats j alors i est le vainqueur de Condorcet.<br>
+	 * @return Renvoie le vainqueur de Condorcet si il existe sous la forme d'un entier. Si il n'existe pas renvoie 0.
+	 */
+	public int vainqueurGraphe() {
+		int vainqueur = -1;
+		boolean vainqueurTrouve = false;
+		for (int i = 0; i < nbNoeuds && vainqueurTrouve == false; i++) {
+			vainqueurTrouve = true;
+			for(int j = 0; j < nbNoeuds; j++) {
+				if (j != i) {
+					if (matrice[i][j] == 0){
+						vainqueurTrouve = false;
+					}
+					else System.out.println(i + " bats " + j);
+				}
+			}
+			if (vainqueurTrouve == true){
+				vainqueur = i;
+			}
+		}
+		return vainqueur;
+	}
+	
+	public boolean contientCycle() {
+		int[][] distanceNoeuds = new int[nbNoeuds][nbNoeuds];
+		int[] visite = new int[nbNoeuds];
+		return true;
+	}
+}
