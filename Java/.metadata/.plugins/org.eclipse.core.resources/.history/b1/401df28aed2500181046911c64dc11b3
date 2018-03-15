@@ -1,0 +1,22 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VoixTest {
+
+	@Test
+	public void testVoix() {
+		int idVotant = 1;
+		int nbAlternatives = 3;
+		Voix voix = new Voix(idVotant, nbAlternatives);
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRangAlternative() {
+		fail("Not yet implemented");
+	}
+
+}
