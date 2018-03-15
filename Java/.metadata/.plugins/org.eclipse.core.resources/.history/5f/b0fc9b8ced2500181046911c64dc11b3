@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * Test les méthodes de Condorcet.<br>
+ * @author julien
+ */
+public class CondorcetTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

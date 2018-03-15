@@ -1,0 +1,40 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import main.Graphe;
+
+import org.junit.Test;
+
+public class TestGraphe {
+	
+	int nbAlternatives = 3;
+	int[][] compteur = {{0, 3, 1}, {1, 0, 3}, {2, 1, 0}};
+	Graphe graphe = new Graphe(nbAlternatives, compteur);
+	
+	@Test
+	public void testRetourneCycle() {
+		int[][] matrice = {{0,1,0}, {0,0,1},{1,0,0}}; 
+		if (!( matrice == graphe.retourneMatrice())) {
+			fail("Erreur");
+		}
+		
+	}
+	
+	@Test
+	public void testVainqueurGraphe() {
+		
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testContientCycle() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCompteurMatchGagnés() {
+		fail("Not yet implemented");
+	}
+
+}
