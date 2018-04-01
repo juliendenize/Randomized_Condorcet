@@ -57,7 +57,23 @@ public class Voix {
  	 * @return Renvoie le rang de l'alternative, sous la forme d'un entier.
  	 * @see VoixAleatoire#rangAlternatives
 	 */
-	public int rangAlternative(int idAlternative) {
+	public int retournerRangAlternative(int idAlternative) {
 		return rangAlternatives[idAlternative];
+	}
+	
+ 	/**
+ 	 * Comportement d'un objet Voix sous la forme d'une chaine de caractère.
+ 	 * Renvoie l'ID du votant et le classement des alternatives. <br>
+ 	 * @return Le classement des alternatives et l'ID du votant, sous la forme d'une chaîne de caractères.
+ 	 * @see Voix
+ 	 * @see Voix#idVotant
+ 	 * @see Voix#rangAlternatives
+ 	 */
+	public String toString() {
+	 	String str = "Voix du votant " + Integer.toString(idVotant) + " :";
+	 	for (int i = 0; i < nbAlternatives; i++) {
+	 		str += " " + (i+1) + " rang " + rangAlternatives[i] + " ;"; 
+	 	}
+	 	return str;
 	}
 }

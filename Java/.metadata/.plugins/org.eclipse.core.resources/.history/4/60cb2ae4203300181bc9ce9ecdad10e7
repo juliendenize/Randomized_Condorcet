@@ -1,0 +1,83 @@
+package main;
+
+/**
+ * <p><b>La classe Graphe représente le graphe orienté engendré par les résultats des matchs d'une instance de Condorcet.</b><br>
+ * Elle est définie par:
+ * <ul>
+ * 	<li>Le nombre de noeuds du graphe.</li>
+ * 	<li>La matrice d'adjancence du graphe.</li>
+ * 	<li>
+ * </ul>
+ * </p><br>
+ * @author julien
+ *
+ */
+public class VictoireParMatchs {
+	
+	int vainqueur;
+	
+	int maxMatchsGagnes;
+	
+	int[] nbMatchsGagnes;
+	
+	/**
+	 * Loi de proba uniforme pour désigner le vainqueur parmis la liste des alternatives en tête (même nombre de matchs gagnés).<br>
+	 * On parcourt le tableau nbMatchsGagnes pour trouver le vainqueur selectionne par un nombre aleatoire allant de 1 au nombre de vainqueurs.<br>
+	 * @param nbMatchsGagnes
+	 * 			Tableau d'entier contenant pour chaque alternatives le nombre de matchs gagnés.
+	 * @param nbAlternativesGagnantes
+	 * 			Le nombre d'alternative ayant gagné le plus de matchs.
+	 * @param maxMatchsGagnes
+	 * 			Le nombre de matchs que les alternatives gagnantes ont gagné.
+	 * 			
+	 */
+	private void designerUnVainqueurParLoiUniforme(int[] nbMatchsGagnes, int nbAlternativesGagnantes, int maxMatchsGagnes) {
+		boolean vainqueurTrouve = false;
+		int nbAleatoire = donnerNbAleatoire(1, nbAlternativesGagnantes);
+		int nbVainqueursParcourus = 0;
+		for (int i = 0; i < nbAlternatives && !vainqueurTrouve; i++) {
+			if(maxMatchsGagnes == nbMatchsGagnes[i]) {
+				nbVainqueursParcourus += 1;
+				if (nbVainqueursParcourus == nbAleatoire) {
+					vainqueur = i;
+					vainqueurTrouve = true;
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Dans le cas où un cycle n'est pas présent dans le graphe des victoires, <b>le vainqueur est celui qui a gagné le plus de matchs.</b><br>
+	 * La méthode trouve ce vainqueur si il en existe un unique sinon elle choisit uniformément parmis les alternatives qui ont gagné le plus de matchs.<br>
+	 * @param nbMatchsGagnes
+	 * 			Tableau d'entier contenant pour chaque alternatives le nombre de matchs gagnés.
+	 * @see Condorcet#compterNbVainqueur(int[], int)
+	 * @see Condorcet#designerUnVainqueurParLoiUniforme(int[], int, int)
+	 * @see Condorcet#retournerMaximumMatchsGagnes(int[])
+	 */
+	private void designerVainqueurParNbMatchsGagnes(int[] nbMatchsGagnes) {
+		int indiceMax = 0;
+		int maxMatchsGagnes = retournerMaximumMatchsGagnes(nbMatchsGagnes);
+		int nbVainqueurs = compterNbVainqueur(nbMatchsGagnes, maxMatchsGagnes);
+		if (nbVainqueurs == 1) vainqueur = indiceMax; //Si il y a un vainqueur c'est le bon.
+		else {
+			designerUnVainqueurParLoiUniforme(nbMatchsGagnes, nbVainqueurs, maxMatchsGagnes);
+		}
+	}
+	
+	/**
+	 * Compte le nombre d'alternatives ayant gagné le plus de matchs. <br>
+	 * @param nbMatchsGagnes
+	 * 			Tableau d'entier contenant pour chaque alternatives le nombre de matchs gagnés.
+	 * @param maxMatchsGagnes
+	 * 			Entier contenant le nombre de match gagnés par les alternatives gagnantes.
+	 * @return le nombre d'alternatives ayant gagné le plus de match sous la forme d'un entier.
+	 */
+	private int compterNbVainqueur(int[] nbMatchsGagnes, int maxMatchsGagnes) {
+		int nbVainqueurs = 0;
+		for (int i = 0; i < nbAlternatives; i ++) { // Compte le nombre de vainqueurs.
+			if (maxMatchsGagnes == nbMatchsGagnes[i]) nbVainqueurs += 1;
+		}
+		return nbVainqueurs;
+	}
+}

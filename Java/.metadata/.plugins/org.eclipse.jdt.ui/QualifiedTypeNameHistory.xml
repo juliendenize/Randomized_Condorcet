@@ -5,4 +5,9 @@
 <fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="java.util.Deque"/>
 <fullyQualifiedTypeName name="main.Graphe"/>
+<fullyQualifiedTypeName name="main.VictoireParMatchs"/>
+<fullyQualifiedTypeName name="main.VoixAleatoire"/>
+<fullyQualifiedTypeName name="com.sun.crypto.provider.TlsPrfGenerator.V10"/>
+<fullyQualifiedTypeName name="main.Condorcet"/>
+<fullyQualifiedTypeName name="main.VoixChoisie"/>
 </qualifiedTypeNameHistroy>

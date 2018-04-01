@@ -1,0 +1,19 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VictoireParMatchsTest {
+
+	int[] nbMatchsGagnes1 = {0, 1, 1, 2};
+	int[] nbMatchsGagnes2 = {0, 1, 2, 3};
+	int[] nbMatchsGagnes3 = {1, 1, 1, 3};
+	int[] nbMatchsGagnes4 = {1, 1, 1 , 1, 0, 4};
+	
+	@Test
+	public void testRetournerVainqueur() {
+		fail("Not yet implemented");
+	}
+
+}

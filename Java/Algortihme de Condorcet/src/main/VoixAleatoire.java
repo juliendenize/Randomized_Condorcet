@@ -16,18 +16,18 @@ public class VoixAleatoire extends Voix {
 	 * Constructeur VoixAleatoire.
 	 * <p>
 	 * 	A la construction d'un objet Voix, l'idVotant et nbAlternatives sont fixées par le constructeur de ballot.<br>
-	 * 	La génération de rangAlternatives est dans la méthode {@link VoixAleatoire#generationRang()}.
+	 * 	La génération de rangAlternatives est dans la méthode {@link VoixAleatoire#genererRang()}.
 	 * </p><br>
 	 * @param idVotant 
 	 * 				L'ID du votant.
 	 * @param nbAlternatives 
 	 * 				Le nombre d'alternatives du vote.
 	 * @see Voix#Voix(int, int)
-	 * @see VoixAleatoire#generationRang()
+	 * @see VoixAleatoire#genererRang()
 	 */
 	public VoixAleatoire(int idVotant, int nbAlternatives) {
 		super(idVotant, nbAlternatives);
-		generationRang();
+		genererRang();
 	}
 	
 	/**
@@ -47,9 +47,9 @@ public class VoixAleatoire extends Voix {
 	 * <br>
 	 *  A la fin de la méthode le classement est bien réalisé même si les nombres ne sont pas nécessairement consécutifs ils sont uniques et cela n'entraine donc pas de problèmes.<br>
 	 *  @see VoixAleatoire#rangAlternatives
-	 *  @see Condorcet#parcoursVoix()
+	 *  @see Condorcet#parcourirLesVoix()
 	 */
-	public void generationRang() {
+	public void genererRang() {
 		int nbAleatoire = 0;
 		int[] pioche = new int[nbAlternatives + 1];
 		
@@ -70,21 +70,5 @@ public class VoixAleatoire extends Voix {
 				pioche[nbAleatoire] = pioche[pioche[0]];
 			}
 		}
-	}
-	
- 	/**
- 	 * Comportement d'un objet VoixAleatoire sous la forme d'une chaine de caractère.
- 	 * Renvoie l'ID du votant et le classement des alternatives. <br>
- 	 * @return Le classement des alternatives et l'ID du votant, sous la forme d'une chaîne de caractères.
- 	 * @see VoixAleatoire
- 	 * @see VoixAleatoire#idVotant
- 	 * @see VoixAleatoire#rangAlternatives
- 	 */
-	public String toString() {
-	 	String str = "Voix du votant " + Integer.toString(idVotant) + " :";
-	 	for (int i = 0; i < nbAlternatives; i++) {
-	 		str += " " + (i+1) + " rang " + rangAlternatives[i] + " ;"; 
-	 	}
-	 	return str;
 	}
 }

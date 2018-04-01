@@ -1,0 +1,29 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import main.VoixChoisie;
+
+import org.junit.Test;
+
+public class VoixChoisieTest {
+	
+	VoixChoisie voix = new VoixChoisie(1, 4);
+	
+	@Test
+	public void testAjouterUnChoix() {
+		voix.ajouterUnChoix(1,3);
+		assertEquals(voix.retournerRangAlternative(1), 3);
+	}
+
+	@Test
+	public void testToString() {
+		String test = "Voix du votant " + 1 + " :";
+		for(int i = 0; i < 4; i++) {
+			test += " " + (i+1) + " rang " + voix.retournerRangAlternative(i) + " ;"; 
+		}
+		assertEquals(voix.toString(), test);
+	}
+
+}
+

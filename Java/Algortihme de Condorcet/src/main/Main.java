@@ -10,8 +10,7 @@ public class Main {
 	 * @param args
 	 */
 	static public void main (String[] args) {
-		Test test = new Test();
-		test.testElection();
+		System.out.println("BOnjour");
 	}
 	
 }

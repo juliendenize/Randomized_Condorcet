@@ -1,0 +1,19 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import main.VoixChoisie;
+
+import org.junit.Test;
+
+public class VoixChoisieTest {
+
+	VoixChoisie voix = new VoixChoisie(1, 4);
+	voix.ajouterUnChoix(3, 1);
+	
+	@Test
+	public void testAjouterUnChoix() {
+		fail("Not yet implemented");
+	}
+
+}

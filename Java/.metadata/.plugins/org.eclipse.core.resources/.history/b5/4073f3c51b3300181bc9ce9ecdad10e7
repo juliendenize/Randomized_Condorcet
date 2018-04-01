@@ -1,0 +1,40 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import main.Graphe;
+
+import org.junit.Test;
+
+public class GrapheTest {
+
+	int[][] matrice =  {{0, 2, 1}, {3, 0, 1}, {2, 1, 0}};
+	int[][] matrice2 = {{0, 2, 1}, {3, 0, 1}, {2, 3, 0}}; 
+	Graphe graphe = new Graphe(3, matrice);
+	Graphe graphe2 = new Graphe(3, matrice2);
+	
+	
+	@Test
+	public void testRetournerMatrice() {
+		int[][] attendu = {{0, 0, 0}, {1, 0, 0}, {1, 0, 0}};
+		int[][] attendu2 = {{0, 0, 0}, {1, 0, 0}, {1, 1, 0}};
+		assertArrayEquals(graphe.retournerMatrice(), attendu);
+		assertArrayEquals(graphe2.retournerMatrice(), attendu2);
+	}
+
+	@Test
+	public void testRetournerVainqueurGraphe() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testContientCycle() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCompterNbMatchGagnés() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -24,7 +24,7 @@ public class VoixChoisie extends Voix {
 	 * @param nbAlternatives 
 	 * 				Le nombre d'alternatives du vote.
 	 * @see Voix#Voix(int, int)
-	 * @see VoixChoisie#addChoix(int, int)
+	 * @see VoixChoisie#ajouterUnChoix(int, int)
 	 */
  	public VoixChoisie(int idVotant, int nbAlternatives) {
  		super(idVotant, nbAlternatives);
@@ -38,7 +38,7 @@ public class VoixChoisie extends Voix {
  	 * 				Rang de l'alternative
  	 * @see VoixChoisie#rangAlternatives
  	 */
- 	public void addChoix (int idAlternative, int rang) {
+ 	public void ajouterUnChoix (int idAlternative, int rang) {
  		rangAlternatives[idAlternative] = rang;
  	}
 
@@ -50,12 +50,5 @@ public class VoixChoisie extends Voix {
  	 * @see VoixChoisie#idVotant
  	 * @see VoixChoisie#rangAlternatives
  	 */
- 	public String toString(){
- 		String str = "Voix du votant " + Integer.toString(idVotant) + " :";
- 		for (int i = 0; i < nbAlternatives; i++) {
- 			str += " " + (i+1) + " rang " + rangAlternatives[i] + " ;"; 
- 		}
- 		return str;
- 	}
- 	
+
 }

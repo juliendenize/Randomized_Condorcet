@@ -1,0 +1,21 @@
+1522237168361	Rename method 'returnMaximumMatchsWon'
+1522237236750	Rename local variable 'compteurVainqueurs'
+1522237993942	Delete element
+1522238396610	Rename method 'election'
+1522239656220	Rename method 'elire'
+1522239683096	Rename method 'renvoiCompteur'
+1522239692464	Rename method 'lectureCompteur'
+1522239705740	Rename method 'parcoursVoix'
+1522239840377	Rename method 'compteurMatchGagnés'
+1522239874329	Rename method 'vainqueurGraphe'
+1522239887316	Rename method 'retourneMatrice'
+1522239914335	Rename method 'generationMatrice'
+1522239933748	Rename method 'addChoix'
+1522239960149	Rename method 'renvoyerCompteur'
+1522239974258	Rename method 'renvoyerMaximumMatchsGagnes'
+1522239992115	Rename method 'generationRang'
+1522240009221	Rename method 'rangAlternative'
+1522240226850	Rename method 'designerUnVainqueur'
+1522241085303	Delete element
+1522304037969	Delete element
+1522304997197	Delete element

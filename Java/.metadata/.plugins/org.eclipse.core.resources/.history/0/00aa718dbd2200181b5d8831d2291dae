@@ -1,6 +1,0 @@
-
-public interface ballot {
-	public int rangAlternative(int);
-	public String toString();
-	
-}

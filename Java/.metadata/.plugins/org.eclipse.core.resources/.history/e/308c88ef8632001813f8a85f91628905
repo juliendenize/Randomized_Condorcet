@@ -1,0 +1,18 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import main.VoixAleatoire;
+
+import org.junit.Test;
+
+public class VoixAleatoireTest {
+	
+	VoixAleatoire voix = new VoixAleatoire(1, 4);
+	
+	@Test
+	public void testToString() {
+		fail("Not yet implemented");
+	}
+
+}
