@@ -49,8 +49,8 @@ public class VictoireParMatchs {
 	 * @param nbMatchsGagnes
 	 * 			Tableau d'entier contenant pour chaque alternatives le nombre de matchs gagnés.
 	 * @see VictoireParMatchs#compterNbVainqueur()
-	 * @see VictoireParMatchs#designerUnVainqueurParLoiUniforme()
-	 * @see VictoireParMatchs#trouverMaximumMatchsGagnes()
+	 * @see VictoireParMatchs#designerUnVainqueurParLoiUniforme(int[], int, int)
+	 * @see Condorcet#retournerMaximumMatchsGagnes(int[])
 	 */
 	public VictoireParMatchs(int[] nbMatchsGagnes) {
 		this.vainqueur = 0;

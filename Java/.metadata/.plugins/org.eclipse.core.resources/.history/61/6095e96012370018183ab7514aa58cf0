@@ -151,7 +151,7 @@ public class Condorcet {
 	 * <b>Renvoie le vainqueur de l'élection représentant par l'instance de Condorcet.</b>
 	 * La méthode regarde d'abord s'il y a un vainqueur de condorcet et si oui le retourne.<br>
 	 * Sinon elle teste s'il y a un cycle dans le graphe des matchs, si oui le vainqueur est désigné par {@link Condorcet#designerVainqueurRandomise(int[])} et sinon par
-	 * {@link VictoireParMatchs}.<br>
+	 * {@link VictoireParMatchs#designerVainqueurParNbMatchsGagnes(int[])}.<br>
 	 * @return <b>Renvoie le vainqueur de l'élection sous la forme d'un entier.</b> Le +1 est dû au fait que les alternatives sont classées de 1 à nbAlternatives.
 	 * @see VictoireParMatchs
 	 * @see Graphe#retournerVainqueurGraphe()
