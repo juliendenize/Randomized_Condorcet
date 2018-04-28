@@ -9,15 +9,34 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Teste la classe Condorcet.<br>
+ * Teste la classe {@link main.Condorcet}.<br> 
  * @author julien
- * @see Condorcet
+ * @see main.Condorcet
  */
 public class CondorcetTest {
-
+	
+	/**
+	 * Représente une élection où un vainqueur de Condorcet existe.<br>
+	 * @see main.Condorcet
+	 */
 	Condorcet electionAvecVainqueurDeCondorcet = new Condorcet(3);
+	
+	/**
+	 * Représente une élection où il n'y a pas de vainqueur de Condorcet et où les victoires forment un cycle de vainqueurs.<br>
+	 * @see main.Condorcet
+	 */
 	Condorcet electionAvecCycle = new Condorcet(3);
+	
+	/**
+	 * Représente une élection où il n'y a pas de vainqueur de Condorcet mais où il y a une alternative qui gagne plus que toutes les autres.<br>
+	 * @see main.Condorcet
+	 */
 	Condorcet electionUnVainqueurParMatch = new Condorcet(3);
+	
+	/**
+	 * Représente une élection où il n'y a pas de vainqueur de Condorcet sans cycle mais avec plusieurs vainqueurs en tête.<br>
+	 * @see main.Condorcet
+	 */
 	Condorcet electionPlusieursVainqueursParMatch = new Condorcet(3);
 	
 	public static void lireTableau(int[] tableau) {
@@ -28,17 +47,20 @@ public class CondorcetTest {
 	}
 	
 	/**
-	 * Prépare chaque élection testant différents cas de figure:
+	 * Prépare chaque élection en ajoutant des voix pour tester différents cas de figure:
 	 * <ul>
 	 * 	<li>Vainqueur de Condorcet.</li>
 	 * 	<li>Cycle présent donc désignation par loi pondérée par les matchs.</li>
 	 * 	<li>Vainqueur par nombre maximum de matchs gagnés.</li>
 	 * 	<li>Vainqueur désigné par les alternatives en tête (même nombre de matchs maximums gagnés).</li>
 	 * @throws Exception
+	 * @see main.VoixChoisie
+	 * @see main.VoixChoisie#ajouterUnChoix(int, int)
 	 */
 	@Before
 	public void setUp() throws Exception {
 		VoixChoisie v1 = new VoixChoisie(1, 3); VoixChoisie v2 = new VoixChoisie(2, 3); VoixChoisie v3 = new VoixChoisie(3, 3); VoixChoisie v4 = new VoixChoisie(4, 3); VoixChoisie v5 = new VoixChoisie(5, 3); VoixChoisie v6 = new VoixChoisie(6, 3); 
+		
 		v1.ajouterUnChoix(0, 2); v1.ajouterUnChoix(1, 1); v1.ajouterUnChoix(2, 3);
 		v2.ajouterUnChoix(0, 1); v2.ajouterUnChoix(1, 0); v2.ajouterUnChoix(2, 3);
 		v3.ajouterUnChoix(0, 2); v3.ajouterUnChoix(1, 1); v3.ajouterUnChoix(2, 3);
@@ -70,7 +92,11 @@ public class CondorcetTest {
 		electionPlusieursVainqueursParMatch.ajouterUneVoix(v1); electionPlusieursVainqueursParMatch.ajouterUneVoix(v2); electionPlusieursVainqueursParMatch.ajouterUneVoix(v3); electionPlusieursVainqueursParMatch.ajouterUneVoix(v4); electionPlusieursVainqueursParMatch.ajouterUneVoix(v5);
 
 	}
-
+	
+	/**Teste la méthode {@link main.Condorcet#retournerCompteur()} en comparant pour chaque élections le nombre de matchs gagnés par alternative comptabilisés par
+	 * l'algorithme et celui attendu.<br>
+	 * @see main.Condorcet#retournerCompteur()
+	 */
 	@Test
 	public void testRetournerCompteur() {
 		electionAvecVainqueurDeCondorcet.elireLeVainqueur();
@@ -98,7 +124,12 @@ public class CondorcetTest {
 				   	        {1,0,0}};
 		assertArrayEquals(attendu4, electionPlusieursVainqueursParMatch.retournerCompteur());
 	}
-
+	
+	/**
+	 * Teste la méthode {@link main.Condorcet#donnerNbAleatoire(int, int)} en testant plusieurs centaines de fois si le nombre aléatoire est bien dans la plage demandée
+	 * en faisant également variée cette plage de données d'un petit écart à un grand.<br>
+	 * @see main.Condorcet#donnerNbAleatoire(int, int)
+	 */
 	@Test
 	public void testDonnerNbAleatoire() {
 		int nb = 0;
@@ -111,16 +142,22 @@ public class CondorcetTest {
 			}
 		}
 	}
-
+	
+	/**
+	 * Teste la méthode {@link main.Condorcet#elireLeVainqueur()}. Comme chaque élection est différente, tous les cas de figures sont testés. Concernant les élections
+	 * où le vainqueur est élue par une loi de probabilité on teste 1000 fois l'algorithme en comptant combien de fois chaque alternative est élue pour savoir si les
+	 * probabilités sont bien respectées.<br>
+	 * @see main.Condorcet#elireLeVainqueur()
+	 */
 	@Test
 	public void testElireLeVainqueur() {
-		//assertEquals(2, electionAvecVainqueurDeCondorcet.elireLeVainqueur());
+		assertEquals(2, electionAvecVainqueurDeCondorcet.elireLeVainqueur());
 		
 		int[] nbDeVictoireParAlternatives = new int[3];
 		int vainqueur;
 		for (int i = 0; i < 1000; i++) {
 			vainqueur = electionAvecCycle.elireLeVainqueur();
-			if (vainqueur > 3 || vainqueur < 1) { // Le vainqueur doit être soit 1, 2 ou 3.
+			if (vainqueur > 3 || vainqueur < 1) { // Le vainqueur doit être soit 1, 2 ou 3 avec une probabilité uniforme.
 				fail("Vainqueur en dehors de la plage autorisée pour vainqueur cycle");
 			}
 			else {
@@ -135,7 +172,7 @@ public class CondorcetTest {
 		nbDeVictoireParAlternatives = new int[3];
 		for (int i = 0; i < 1000; i++) {
 			vainqueur = electionPlusieursVainqueursParMatch.elireLeVainqueur();
-			if (vainqueur != 1 && vainqueur != 2) { // Le vainqueur doit être soit 1 soit 2.
+			if (vainqueur != 1 && vainqueur != 2) { // Le vainqueur doit être soit 1 soit 2 avec une probabilité uniforme.
 				fail("Vainqueur en dehors de la plage autorisée pour plusieurs vainqueurs sans cycle");
 			}
 			else {
@@ -147,6 +184,10 @@ public class CondorcetTest {
 		
 	}
 
+	/**
+	 * Teste la méthode {@link main.Condorcet#toString()}. Elle compare pour une élection connue la chaîne de caractère attendue et ce que l'élection renvoie.<br>
+	 * @see main.Condorcet#toString()
+	 */
 	@Test
 	public void testToString() {
 		electionAvecVainqueurDeCondorcet.elireLeVainqueur();

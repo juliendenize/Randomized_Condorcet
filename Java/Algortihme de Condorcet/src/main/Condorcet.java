@@ -13,6 +13,7 @@ import java.util.LinkedList;
  * </ul>
  * </p><br>
  * @author julien
+ * @see test.CondorcetTest
  */
 public class Condorcet {
 	
@@ -38,7 +39,7 @@ public class Condorcet {
 	
 	/**
 	 * Contient l'id du vainqueur de Condorcet. Ce nombre est modifié lorsque le vainqueur est trouvé.<br>
-	 * @see (à remplir lorsque la méthode pour trouver le vainqueur est présente)
+	 * @see Condorcet#elireLeVainqueur()
 	 */
 	private int vainqueur;
 	
@@ -46,7 +47,7 @@ public class Condorcet {
 	 * Contient les victoires des alternatives sur les autres. <br>
 	 * @see Graphe
 	 */
-	Graphe grapheAlternatives;
+	public Graphe grapheAlternatives;
 	
 	/**
 	 * <b>Constructeur Condorcet</b>
@@ -109,6 +110,7 @@ public class Condorcet {
 	/**
 	 * Renvoie le tableau compteur<br>
 	 * @return renvoie le tableau compteur sous la forme d'un tableau d'entiers à deux dimensions.
+	 * @see test.CondorcetTest#testRetournerCompteur()
 	 */
 	public int[][] retournerCompteur() {
 		return compteurMatchs;
@@ -121,6 +123,7 @@ public class Condorcet {
 	 * @param nbMaximum
 	 * 			Borne supérieur du nombre.
 	 * @return Renvoie le nombre aléatoire sous forme d'entier.
+	 * @see test.CondorcetTest#testDonnerNbAleatoire()
 	 */
 	public static int donnerNbAleatoire(int nbMinimum, int nbMaximum) {
 		return nbMinimum + (int)(Math.random() * (nbMaximum - nbMinimum + 1));
@@ -156,6 +159,7 @@ public class Condorcet {
 	 * @see VictoireParMatchs
 	 * @see Graphe#retournerVainqueurGraphe()
 	 * @see Condorcet#designerVainqueurRandomise(int[])
+	 * @see test.CondorcetTest#testElireLeVainqueur()
 	 */
 	public int elireLeVainqueur() {
 		this.parcourirLesVoix();
@@ -179,6 +183,7 @@ public class Condorcet {
 	 * @see Condorcet
 	 * @see Condorcet#nbAlternatives
 	 * @see Condorcet#vainqueur
+	 * @see test.CondorcetTest#testToString()
 	 */
 	public String toString() {
 		return "Election avec " + Integer.toString(nbAlternatives) + " alternatives et le gagnant est " + Integer.toString(vainqueur + 1);

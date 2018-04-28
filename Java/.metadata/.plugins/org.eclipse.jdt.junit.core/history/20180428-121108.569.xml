@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="GrapheTest" project="Algortihme de Condorcet" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="test.GrapheTest" time="0.004">
+    <testcase name="testRetournerMatrice" classname="test.GrapheTest" time="0.002"/>
+    <testcase name="testToString" classname="test.GrapheTest" time="0.0"/>
+    <testcase name="testCompterNbMatchGagnés" classname="test.GrapheTest" time="0.0"/>
+    <testcase name="testContientCycle" classname="test.GrapheTest" time="0.001"/>
+    <testcase name="testRetournerVainqueurGraphe" classname="test.GrapheTest" time="0.001"/>
+  </testsuite>
+</testrun>

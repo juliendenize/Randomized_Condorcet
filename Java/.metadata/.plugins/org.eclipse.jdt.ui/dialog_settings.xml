@@ -5,7 +5,7 @@
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 	<section name="javadoc">
-		<item value="public" key="access"/>
+		<item value="private" key="access"/>
 		<item value="false" key="noindex"/>
 		<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/javadoc.xml" key="antpath"/>
 		<item value="false" key="nodeprecatedlist"/>
@@ -50,7 +50,7 @@
 		</section>
 	</section>
 	<section name="NewClassWizardPage">
-		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_constructor"/>
 		<item value="false" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
 	</section>
@@ -64,7 +64,7 @@
 	<section name="JavadocWizardDialog">
 		<item value="700" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="732" key="DIALOG_HEIGHT"/>
+		<item value="760" key="DIALOG_HEIGHT"/>
 		<item value="577" key="DIALOG_X_ORIGIN"/>
 		<item value="96" key="DIALOG_Y_ORIGIN"/>
 	</section>

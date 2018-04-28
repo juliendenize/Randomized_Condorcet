@@ -1,0 +1,72 @@
+package main;
+import main.Condorcet;
+
+/**
+ * <p><b>La classe VoixAleatoire représente la voix généré aléatoirement avec un idVotant pour la rendre unique.</b><br>
+ * Elle est une classe fille de Voix et est définie par:
+ * <ul>
+ * 	<li>L'ID du votant représenté par la voix.</li>
+ * 	<li>Le nombre d'alternatives du vote.</li>
+ * 	<li>Le rang des alternatives.</li>
+ * 	<li>La matrice de pondération des choix des rangs.</li>
+ * </ul>
+ * </p><br>
+ * @author julien
+ * @see test.VoixAleatoirePondereeTest
+ */
+
+public class VoixAleatoirePonderee extends Voix {
+
+	/**
+	 * Matrice de pondération. dans la case [i][j] l'alternative j a matricePonderation[i][j] pourcent de chance d'être sélectionné au rang [i].<br>
+	 * Elle est de taille nbAlternatives*(nbAlternatives + 1) afin d'avoir une probabilité de n'avoir aucune alternative choisie (alternative 0).
+	 */
+	private int[][] matricePonderation;
+	
+	/**
+	 * Constructeur de VoixAleatoirePonderee.<br>
+	 * Id votant, nbAlternatives fixés par le constructeur de la classe mère {@link Voix#Voix(int, int)}.<br>
+	 * @param idVotant
+	 * 				L'ID du votant.
+	 * @param nbAlternatives
+	 * 				Le nombre d'alternatives du vote.
+	 * @param matricePonderation
+	 * 				La matrice de pondération.
+	 * @see Voix#Voix(int, int)
+	 */
+	public VoixAleatoirePonderee(int idVotant, int nbAlternatives, int[][] matricePonderation) {
+		super(idVotant, nbAlternatives);
+		this.matricePonderation = matricePonderation;
+		genererVoix();
+	}
+	
+	
+	private void genererVoix(){
+		boolean[] alternativeVisite = new boolean[nbAlternatives + 1];
+		int pourcentageMax = 0;
+		int pourcentageAleatoire = 0;
+		int pourcentageActuel = 0;
+		boolean pourcentageAtteint = false;
+		
+		for(int i = 0; i < nbAlternatives; i++) {
+			pourcentageMax = 0;
+			for(int j = 0; i < nbAlternatives + 1; j++) {
+				if(!(alternativeVisite[j])) pourcentageMax += matricePonderation[i][j];
+			}
+			
+			pourcentageAleatoire = Condorcet.donnerNbAleatoire(1, pourcentageMax);
+			pourcentageActuel = 0;
+			pourcentageAtteint = false;
+			for(int j = 0; i < nbAlternatives + 1 && !(pourcentageAtteint); j++) {
+				if(!(alternativeVisite[j])){
+					pourcentageActuel += matricePonderation[i][j];
+					if(pourcentageActuel >= pourcentageAleatoire) {
+						this.rangAlternatives[i] = j;
+						pourcentageAtteint = true;
+					}
+				}
+			}
+		}
+	}
+	
+}

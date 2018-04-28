@@ -14,9 +14,9 @@ package main;
 public class VoixChoisie extends Voix {
 		
 	/**
-	 * Constructeur Voix.
+	 * Constructeur VoixChoisie.
 	 * <p>
-	 * 	A la construction d'un objet Voix, l'idVotant, nbAlternatives et rangAltenratives sont fixées par le constructeur de la classe mère.<br>
+	 * 	A la construction d'un objet VoixChoisie, l'idVotant, nbAlternatives et rangAltenratives sont fixées par le constructeur de la classe mère.<br>
 	 * 	rangAlternatives contiendra les bonnes valeurs après lecture de tous les choix de tous les votants à partir de la base de donnée.
 	 * </p><br>
 	 * @param idVotant 

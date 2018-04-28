@@ -7,20 +7,29 @@ import main.VoixChoisie;
 import org.junit.Test;
 
 /**
- * Teste la classe VoixChoisie.
+ * Teste la classe {@link main.VoixChoisie}.<br>
  * @author julien
- * @see VoixChoisie
+ * @see main.VoixChoisie
  */
 public class VoixChoisieTest {
 	
 	VoixChoisie voix = new VoixChoisie(1, 4);
 	
+	/**
+	 * Teste la méthode {@link main.VoixChoisie#ajouterUnChoix(int, int)} en comparant le rang attendu d'une alternative dont on a ajouté le choix et ce que renvoie 
+	 * la voix pour le rang de cette alternative.<br>
+	 * @see main.VoixChoisie#ajouterUnChoix(int, int)
+	 */
 	@Test
 	public void testAjouterUnChoix() {
 		voix.ajouterUnChoix(1,3);
 		assertEquals(3, voix.retournerRangAlternative(1));
 	}
 
+	/**
+	 * Teste la méthode {@link main.Voix#toString()}en comparant la chaîne attendu avec le toString renvoyée par la voix.<br>
+	 * @see main.Voix#toString()
+	 */
 	@Test
 	public void testToString() {
 		String test = "Voix du votant " + 1 + " :";

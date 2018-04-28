@@ -1,0 +1,24 @@
+package test;
+
+import static org.junit.Assert.*;
+import main.Voix;
+import main.VoixAleatoirePonderee;
+import main.VoixChoisie;
+
+import org.junit.Test;
+
+public class VoixAleatoirePondereeTest {
+	
+	VoixAleatoirePonderee voix;
+	
+	@Test
+	public void testVoixAleatoirePonderee() {
+		VoixChoisie voix1 = new VoixChoisie(1, 3); VoixChoisie voix2 = new VoixChoisie(2, 3); VoixChoisie voix3 = new VoixChoisie(3, 3);
+		voix1.ajouterUnChoix(1, 1); voix1.ajouterUnChoix(2, 2); voix1.ajouterUnChoix(3, 3);
+		voix2.ajouterUnChoix(1, 2); voix2.ajouterUnChoix(2, 3); voix2.ajouterUnChoix(3, 1);
+		voix3.ajouterUnChoix(1, 3); voix3.ajouterUnChoix(2, 1); voix3.ajouterUnChoix(3, 2);
+		
+		Voix[] tableauVoix = {voix 1, 
+	}
+
+}

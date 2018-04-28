@@ -86,7 +86,7 @@ package main;
 		election.parcourirLesVoix();
 		election.lireCompteur();
 	}
-*/
+	
 	/**
 	 * Fais le même test que {@link Test#testGraphe()} en testant en plus l'implémentation du graphe et ses méthodes.<br>
 	 * @see Test#testGraphe()

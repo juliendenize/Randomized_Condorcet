@@ -2,7 +2,7 @@ package main;
 
 /**
  * <b>La Classe Ballot permet de créer des voix qui soient aléatoires ou non.</b><br> 
- * <p>C'est une classe mère représentant les voix. Elle est là mère de Voix et VoixAleatoire<br>
+ * <p>C'est une classe mère représentant les voix. Elle n'est jamais implémentée. Elle est la mère de Voix, VoixAleatoire et VoixAleatoirePonderee.<br>
  * Cette classe est définie par:
  *<ul>
  * 	<li>L'ID du votant représenté par la voix.</li>

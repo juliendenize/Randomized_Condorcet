@@ -15,7 +15,7 @@ import main.Condorcet;
  * </ul>
  * </p><br>
  * @author julien
- *
+ * @see test.VictoireParMatchsTest
  */
 public class VictoireParMatchs {
 	
@@ -67,7 +67,6 @@ public class VictoireParMatchs {
 	/**
 	 * Calcul le nombre maximum de match qu'une alternative a gagné.<br>
 	 * Renvoie ce nombre maximum.<br>
-	 * @return le nombre maximum de match gagné sous la forme d'un entier.
 	 */
 	private void trouverMaximumMatchsGagnes() {
 		for (int i = 0; i < nbAlternatives; i++) {
@@ -97,8 +96,7 @@ public class VictoireParMatchs {
 	}
 	
 	/**
-	 * Compte le nombre d'alternatives ayant gagné le plus de matchs. <br>
-	 * @return le nombre d'alternatives ayant gagné le plus de match sous la forme d'un entier.
+	 * Compte le nombre d'alternatives ayant gagné le plus de matchs.<br>
 	 */
 	private void compterNbVainqueur() {
 		nbVainqueurs = 0;
@@ -113,6 +111,7 @@ public class VictoireParMatchs {
 	/**
 	 * Renvoie le vainqueur désigné par l'objet.
 	 * @return le vainqueur sous la forme d'un entier.
+	 * @see test.VictoireParMatchsTest#testRetournerVainqueur()
 	 */
 	public int retournerVainqueur() {
 		return vainqueur;

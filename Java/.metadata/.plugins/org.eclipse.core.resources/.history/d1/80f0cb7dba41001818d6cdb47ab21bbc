@@ -1,0 +1,14 @@
+package test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VoixAleatoirePondereeTest {
+
+	@Test
+	public void testVoixAleatoirePonderee() {
+		fail("Not yet implemented");
+	}
+
+}

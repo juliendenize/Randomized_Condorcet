@@ -1,7 +1,0 @@
-package main;
-
-public class NbAleatoireException extends Exception{
-	public NbAleatoireException () {
-		System.out.println("Intervalle de nombre en entrée négatif");
-	}
-}
