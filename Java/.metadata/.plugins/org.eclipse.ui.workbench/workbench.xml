@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="22" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1084" maximized="true" width="928" x="65" y="24">
+<window height="1083" maximized="true" width="922" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -36,52 +36,37 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VictoireParMatchsTest.java" partName="VictoireParMatchsTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/VictoireParMatchsTest.java" title="VictoireParMatchsTest.java" tooltip="Algortihme de Condorcet/src/test/VictoireParMatchsTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/VictoireParMatchsTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2007" selectionTopPixel="585"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePonderee.java" partName="VoixAleatoirePonderee.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java" title="VoixAleatoirePonderee.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1401" selectionTopPixel="216"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrapheTest.java" partName="GrapheTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/GrapheTest.java" title="GrapheTest.java" tooltip="Algortihme de Condorcet/src/test/GrapheTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/GrapheTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePondereeTest.java" partName="VoixAleatoirePondereeTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java" title="VoixAleatoirePondereeTest.java" tooltip="Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2099" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CondorcetTest.java" partName="CondorcetTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/CondorcetTest.java" title="CondorcetTest.java" tooltip="Algortihme de Condorcet/src/test/CondorcetTest.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/CondorcetTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2211"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixChoisieTest.java" partName="VoixChoisieTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/VoixChoisieTest.java" title="VoixChoisieTest.java" tooltip="Algortihme de Condorcet/src/test/VoixChoisieTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/VoixChoisieTest.java"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixChoisie.java" partName="VoixChoisie.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/VoixChoisie.java" title="VoixChoisie.java" tooltip="Algortihme de Condorcet/src/main/VoixChoisie.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/VoixChoisie.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoire.java" partName="VoixAleatoire.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/VoixAleatoire.java" title="VoixAleatoire.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoire.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/VoixAleatoire.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="651" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="394" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePonderee.java" partName="VoixAleatoirePonderee.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java" title="VoixAleatoirePonderee.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoireTest.java" partName="VoixAleatoireTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/VoixAleatoireTest.java" title="VoixAleatoireTest.java" tooltip="Algortihme de Condorcet/src/test/VoixAleatoireTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/VoixAleatoireTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="17" selectionOffset="215" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Voix.java" partName="Voix.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/Voix.java" title="Voix.java" tooltip="Algortihme de Condorcet/src/main/Voix.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/Voix.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="461" selectionTopPixel="180"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" partName="Condorcet.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/Condorcet.java" title="Condorcet.java" tooltip="Algortihme de Condorcet/src/main/Condorcet.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" partName="Condorcet.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/Condorcet.java" title="Condorcet.java" tooltip="Algortihme de Condorcet/src/main/Condorcet.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3680" selectionTopPixel="1635"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VictoireParMatchs.java" partName="VictoireParMatchs.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/VictoireParMatchs.java" title="VictoireParMatchs.java" tooltip="Algortihme de Condorcet/src/main/VictoireParMatchs.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/VictoireParMatchs.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePondereeTest.java" partName="VoixAleatoirePondereeTest.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java" title="VoixAleatoirePondereeTest.java" tooltip="Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2226"/>
 </editor>
 </editors>
 <views>
@@ -123,7 +108,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (4 items)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (1 item)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="807" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -161,7 +147,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -282,8 +268,8 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.eclemma.ui.CoverageView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
 <layout>
@@ -308,14 +294,14 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.13991323" ratioLeft="258" ratioRight="1586" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.18872017" ratioLeft="348" ratioRight="1496" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7218814" ratioLeft="706" ratioRight="272" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.eclemma.ui.CoverageView" label="Coverage"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -345,167 +331,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/VictoireParMatchsTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixAleatoire.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/GrapheTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/VoixAleatoireTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/CondorcetTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/VoixChoisieTest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/Voix.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixChoisie.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/CondorcetTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixChoisie.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixAleatoire.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/test/VoixAleatoireTest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VictoireParMatchs.java"/>
 </editors>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1461" y="0"/>
+<item historyLabel="VoixAleatoirePonderee.java" index="1">
+<position info="not_deleted" x="2036" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="2365" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="752" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="563" y="0"/>
-</item>
-<item historyLabel="GrapheTest.java" index="2">
-<position info="not_deleted" x="13" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="853" y="0"/>
-</item>
-<item historyLabel="VictoireParMatchsTest.java" index="0">
-<position info="not_deleted" x="2007" y="0"/>
-</item>
-<item historyLabel="VoixChoisie.java" index="8">
-<position info="not_deleted" x="410" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="853" y="0"/>
-</item>
-<item historyLabel="GrapheTest.java" index="2">
-<position info="not_deleted" x="13" y="0"/>
-</item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="14" y="401"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="499" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePondereeTest.java" index="9">
-<position info="not_deleted" x="152" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1056" y="0"/>
-</item>
-<item historyLabel="VoixChoisieTest.java" index="5">
+<item historyLabel="CondorcetTest.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="652" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="752" y="0"/>
 </item>
-<item historyLabel="Voix.java" index="7">
-<position info="not_deleted" x="461" y="0"/>
-</item>
-<item historyLabel="VoixChoisie.java" index="8">
-<position info="not_deleted" x="502" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePondereeTest.java" index="9">
-<position info="not_deleted" x="152" y="0"/>
-</item>
-<item historyLabel="VoixChoisie.java" index="8">
-<position info="not_deleted" x="353" y="0"/>
-</item>
-<item historyLabel="Voix.java" index="7">
-<position info="not_deleted" x="461" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1056" y="0"/>
-</item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="652" y="0"/>
-</item>
-<item historyLabel="VoixChoisieTest.java" index="5">
+<item historyLabel="CondorcetTest.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="VoixAleatoireTest.java" index="3">
-<position info="not_deleted" x="344" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="457" y="0"/>
 </item>
-<item historyLabel="CondorcetTest.java" index="4">
-<position info="not_deleted" x="13" y="0"/>
-</item>
-<item historyLabel="VoixAleatoireTest.java" index="3">
-<position info="not_deleted" x="344" y="0"/>
-</item>
-<item historyLabel="CondorcetTest.java" index="4">
-<position info="not_deleted" x="13" y="0"/>
-</item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="880" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1168" y="0"/>
-</item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="880" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1056" y="0"/>
-</item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="880" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1262" y="0"/>
-</item>
-<item historyLabel="VoixAleatoire.java" index="1">
-<position info="not_deleted" x="651" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="36" y="0"/>
-</item>
-<item historyLabel="Condorcet.java" index="10">
-<position info="not_deleted" x="3680" y="0"/>
-</item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="263" y="0"/>
-</item>
-<item historyLabel="VictoireParMatchs.java" index="11">
+<item historyLabel="CondorcetTest.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="263" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="752" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1836" y="0"/>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1882" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="752" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="1965" y="0"/>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="2126" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="752" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="2338" y="0"/>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Voix.java" index="7">
-<position info="not_deleted" x="461" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="1392" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="2338" y="0"/>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Voix.java" index="7">
-<position info="not_deleted" x="461" y="0"/>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="1392" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="2338" y="0"/>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="VoixAleatoirePonderee.java" index="6">
-<position info="not_deleted" x="13" y="0"/>
+<item historyLabel="VoixAleatoirePonderee.java" index="1">
+<position info="not_deleted" x="1179" y="0"/>
 </item>
-<item active="true" historyLabel="VoixAleatoirePondereeTest.java" index="9">
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="1392" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="2097" y="0"/>
+</item>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="2099" y="0"/>
+</item>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="2099" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePonderee.java" index="1">
+<position info="not_deleted" x="1401" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePondereeTest.java" index="0">
+<position info="not_deleted" x="2099" y="0"/>
+</item>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePonderee.java" index="1">
+<position info="not_deleted" x="1401" y="0"/>
+</item>
+<item historyLabel="VoixChoisie.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoirePonderee.java" index="1">
+<position info="not_deleted" x="1401" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="416" y="0"/>
+</item>
+<item historyLabel="VoixAleatoireTest.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="VoixAleatoireTest.java" index="5">
+<position info="not_deleted" x="215" y="17"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="VoixChoisie.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="411" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="445" y="0"/>
+</item>
+<item historyLabel="VoixChoisie.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CondorcetTest.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixChoisie.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="394" y="0"/>
+</item>
+<item historyLabel="VoixChoisie.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Condorcet.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="394" y="0"/>
+</item>
+<item historyLabel="VoixAleatoireTest.java" index="5">
+<position info="not_deleted" x="215" y="17"/>
+</item>
+<item historyLabel="VoixAleatoire.java" index="4">
+<position info="not_deleted" x="394" y="0"/>
+</item>
+<item historyLabel="VoixAleatoireTest.java" index="5">
+<position info="not_deleted" x="215" y="17"/>
+</item>
+<item active="true" historyLabel="Condorcet.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -514,6 +495,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -521,30 +508,46 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="index.html" tooltip="Algortihme de Condorcet/Doc/index.html">
+<persistable path="/Algortihme de Condorcet/Doc/index.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" tooltip="Algortihme de Condorcet/src/main/Condorcet.java">
+<persistable path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="Condorcet.html" tooltip="Algortihme de Condorcet/Doc/main/Condorcet.html">
+<persistable path="/Algortihme de Condorcet/Doc/main/Condorcet.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoireTest.java" tooltip="Algortihme de Condorcet/src/test/VoixAleatoireTest.java">
+<persistable path="/Algortihme de Condorcet/src/test/VoixAleatoireTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoire.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoire.java">
+<persistable path="/Algortihme de Condorcet/src/main/VoixAleatoire.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixChoisie.java" tooltip="Algortihme de Condorcet/src/main/VoixChoisie.java">
+<persistable path="/Algortihme de Condorcet/src/main/VoixChoisie.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CondorcetTest.java" tooltip="Algortihme de Condorcet/src/test/CondorcetTest.java">
+<persistable path="/Algortihme de Condorcet/src/test/CondorcetTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Graphe.java" tooltip="Algortihme de Condorcet/src/main/Graphe.java">
+<persistable path="/Algortihme de Condorcet/src/main/Graphe.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePondereeTest.java" tooltip="Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java">
 <persistable path="/Algortihme de Condorcet/src/test/VoixAleatoirePondereeTest.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VictoireParMatchs.java" tooltip="Algortihme de Condorcet/src/main/VictoireParMatchs.java">
 <persistable path="/Algortihme de Condorcet/src/main/VictoireParMatchs.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" tooltip="Algortihme de Condorcet/src/main/Condorcet.java">
-<persistable path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Voix.java" tooltip="Algortihme de Condorcet/src/main/Voix.java">
 <persistable path="/Algortihme de Condorcet/src/main/Voix.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixChoisie.java" tooltip="Algortihme de Condorcet/src/main/VoixChoisie.java">
-<persistable path="/Algortihme de Condorcet/src/main/VoixChoisie.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePonderee.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java">
 <persistable path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoire.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoire.java">
-<persistable path="/Algortihme de Condorcet/src/main/VoixAleatoire.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="allclasses-frame.html" tooltip="Algortihme de Condorcet/Doc/allclasses-frame.html">
 <persistable path="/Algortihme de Condorcet/Doc/allclasses-frame.html"/>
@@ -552,23 +555,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixChoisieTest.java" tooltip="Algortihme de Condorcet/src/test/VoixChoisieTest.java">
 <persistable path="/Algortihme de Condorcet/src/test/VoixChoisieTest.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CondorcetTest.java" tooltip="Algortihme de Condorcet/src/test/CondorcetTest.java">
-<persistable path="/Algortihme de Condorcet/src/test/CondorcetTest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoireTest.java" tooltip="Algortihme de Condorcet/src/test/VoixAleatoireTest.java">
-<persistable path="/Algortihme de Condorcet/src/test/VoixAleatoireTest.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GrapheTest.java" tooltip="Algortihme de Condorcet/src/test/GrapheTest.java">
 <persistable path="/Algortihme de Condorcet/src/test/GrapheTest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VictoireParMatchsTest.java" tooltip="Algortihme de Condorcet/src/test/VictoireParMatchsTest.java">
-<persistable path="/Algortihme de Condorcet/src/test/VictoireParMatchsTest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Graphe.java" tooltip="Algortihme de Condorcet/src/main/Graphe.java">
-<persistable path="/Algortihme de Condorcet/src/main/Graphe.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="CondorcetTest.html" tooltip="Algortihme de Condorcet/Doc/test/CondorcetTest.html">
-<persistable path="/Algortihme de Condorcet/Doc/test/CondorcetTest.html"/>
 </file>
 </mruList>
 </workbench>
