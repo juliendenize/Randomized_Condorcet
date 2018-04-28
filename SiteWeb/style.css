@@ -1,0 +1,28 @@
+/*
+@font-face {
+	font-family: 'Raleway';
+	src: url('Raleway-Regular.ttf') format('truetype');
+}
+
+body {
+	font-family:'Raleway',sans-serif;
+}
+
+*/
+
+h1 {
+	text-align: center;
+}
+
+/*
+h2 {
+	color:darkblue;
+	font-size: large;
+}
+
+p {
+	color: blue;
+	font-size: medium;
+	text-align: justify;
+}
+*/
