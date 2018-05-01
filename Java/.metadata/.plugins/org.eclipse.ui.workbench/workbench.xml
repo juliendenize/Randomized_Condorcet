@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
 <window height="1083" maximized="true" width="922" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,10 +28,21 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" partName="Condorcet.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/Condorcet.java" title="Condorcet.java" tooltip="Algortihme de Condorcet/src/main/Condorcet.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePonderee.java" partName="VoixAleatoirePonderee.java" path="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java" title="VoixAleatoirePonderee.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="750" selectionTopPixel="216"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
@@ -107,7 +118,7 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -289,7 +300,18 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
+</editors>
+<item historyLabel="Condorcet.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="VoixAleatoirePonderee.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -306,11 +328,14 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="index.html" tooltip="Algortihme de Condorcet/Doc/index.html">
-<persistable path="/Algortihme de Condorcet/Doc/index.html"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePonderee.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java">
+<persistable path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Condorcet.java" tooltip="Algortihme de Condorcet/src/main/Condorcet.java">
 <persistable path="/Algortihme de Condorcet/src/main/Condorcet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="index.html" tooltip="Algortihme de Condorcet/Doc/index.html">
+<persistable path="/Algortihme de Condorcet/Doc/index.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="Condorcet.html" tooltip="Algortihme de Condorcet/Doc/main/Condorcet.html">
 <persistable path="/Algortihme de Condorcet/Doc/main/Condorcet.html"/>
@@ -338,9 +363,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Voix.java" tooltip="Algortihme de Condorcet/src/main/Voix.java">
 <persistable path="/Algortihme de Condorcet/src/main/Voix.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VoixAleatoirePonderee.java" tooltip="Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java">
-<persistable path="/Algortihme de Condorcet/src/main/VoixAleatoirePonderee.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.browser.editorSupport" name="allclasses-frame.html" tooltip="Algortihme de Condorcet/Doc/allclasses-frame.html">
 <persistable path="/Algortihme de Condorcet/Doc/allclasses-frame.html"/>
