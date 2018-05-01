@@ -9,7 +9,7 @@
 			try {
 				$bdd = new PDO('mysql:host=localhost;dbname=condorcet;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // à modifier quand on aura un hôte
 			}
-		
+
 			catch (Exception $e) {
 				die('Erreur : ' . $e->getMessage());
 			}
@@ -35,11 +35,11 @@
 					die('Erreur : ' .$e->getMessage());
 				}
 			}
-			
+
 			echo 'Tu as bien été ajouté à la base de données !';
 			// Redirection de l'utilisateur vers la page d'accueil
 			header('Location: index.php');
 		?>
-			
+
 	</body>
 </html>

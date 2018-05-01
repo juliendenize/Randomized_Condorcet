@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Nouveau vote</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<?php $title = 'Nouveau vote' ?>
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</head>
-<body>
+<?php ob_start(); ?>
 	<h2>Nouveau vote</h2>
 	<form method="post" action="new_vote_traitement.php">
 
 		<p>
 			<label for="title">Titre du vote : </label>
 			<input type="text" name="title" required autofocus>
-		</p>	
+		</p>
 		<p>
-			Type de vote : 
+			Type de vote :
 			<input type="radio" name="type_vote" value="private" id="private" required/>
 			<label for="private">Vote privé</label>
 			<input type="radio" name="type_vote" value="public" id="public"/>
@@ -54,8 +42,8 @@
 			<label for="send"></label>
 			<input type="submit" name="submit" value="Envoyer">
 		</p>
-	
-	</form>
 
-</body>
-</html>
+	</form>
+	<?php ob_get_clean(); ?>
+
+	<?php require('template.php'); ?>
