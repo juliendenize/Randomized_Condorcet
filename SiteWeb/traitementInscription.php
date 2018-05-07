@@ -23,7 +23,7 @@
 
 				try
 				{
-					$req = $bdd->prepare('INSERT INTO users(pseudo, email, password) VALUES (:pseudo, :email, :password)');
+					$req = $bdd->prepare('INSERT INTO users (pseudo, email, password) VALUES (:pseudo, :email, :password)');
 					$req->execute(array(
 						'pseudo' => $pseudo,
 						'email' => $email,
