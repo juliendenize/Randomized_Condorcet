@@ -128,9 +128,9 @@ public class Graphe {
 	/**
 	 * Compte le nombre de match Gagnés pour chaque alternative et le nombre total de victoires. <br> 
 	 * @return Renvoie un tableau d'entier contenant les matchs gagnés pour chaque alternative et le nombre total de matchs gagnés.
-	 * @see test.GrapheTest#testCompterNbMatchsGagnes()
+	 * @see test.GrapheTest#testCompterNbMatchGagnés()
 	 */
-	public int[] compterNbMatchsGagnes() {
+	public int[] compterNbMatchGagnés() {
 		int[] nbVictoires = new int[nbNoeuds + 1];
 		for(int i = 0; i < nbNoeuds; i ++) {
 			for(int j = 0; j < nbNoeuds; j++) {

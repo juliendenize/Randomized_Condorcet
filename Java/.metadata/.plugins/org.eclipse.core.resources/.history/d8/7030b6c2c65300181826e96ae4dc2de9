@@ -105,20 +105,20 @@ public class GrapheTest {
 	}
 
 	/**
-	 * Teste la méthode {@link main.Graphe#compterNbMatchsGagnes()} en vérifiant qu'elle compte bien le nombre de matchs gagnés par chaque alternative pour chaque
+	 * Teste la méthode {@link main.Graphe#compterNbMatchGagnés()} en vérifiant qu'elle compte bien le nombre de matchs gagnés par chaque alternative pour chaque
 	 * graphe testé.<br>
-	 * @see main.Graphe#compterNbMatchsGagnes()
+	 * @see main.Graphe#compterNbMatchGagnés()
 	 */
 	@Test
-	public void testCompterNbMatchsGagnes() {
+	public void testCompterNbMatchGagnés() {
 		int[] graphe1MatchsGagnes = {0, 1, 1, 2};
 		int[] graphe2MatchsGagnes = {0, 1, 2, 3};
 		int[] graphe3MatchsGagnes = {1, 1, 1, 3};
 		int[] graphe4MatchsGagnes = {1, 1, 1 , 1, 0, 4};
-		assertArrayEquals(graphe1MatchsGagnes, graphe.compterNbMatchsGagnes());
-		assertArrayEquals(graphe2MatchsGagnes, graphe2.compterNbMatchsGagnes());
-		assertArrayEquals(graphe3MatchsGagnes, graphe3.compterNbMatchsGagnes());
-		assertArrayEquals(graphe4MatchsGagnes, graphe4.compterNbMatchsGagnes());
+		assertArrayEquals(graphe1MatchsGagnes, graphe.compterNbMatchGagnés());
+		assertArrayEquals(graphe2MatchsGagnes, graphe2.compterNbMatchGagnés());
+		assertArrayEquals(graphe3MatchsGagnes, graphe3.compterNbMatchGagnés());
+		assertArrayEquals(graphe4MatchsGagnes, graphe4.compterNbMatchGagnés());
 	}
 	
 	/**

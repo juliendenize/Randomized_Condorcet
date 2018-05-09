@@ -166,7 +166,7 @@ public class Condorcet {
 		grapheAlternatives = new Graphe(nbAlternatives, compteurMatchs);
 		vainqueur = grapheAlternatives.retournerVainqueurGraphe();
 		if (vainqueur == -1) { //Si il n'y a pas de vainqueur de Condorcet
-			int[] nbMatchsGagnes = grapheAlternatives.compterNbMatchsGagnes();
+			int[] nbMatchsGagnes = grapheAlternatives.compterNbMatchGagnés();
 			if (grapheAlternatives.contientCycle()) designerVainqueurRandomise(nbMatchsGagnes);
 			else { // S'il n'y a pas de cycle.
 				VictoireParMatchs vpm = new VictoireParMatchs(nbMatchsGagnes);
