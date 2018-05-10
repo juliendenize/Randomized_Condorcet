@@ -1,7 +1,7 @@
-<?php $title = 'Votes en cours' ?>
-
-<?php ob_start(); ?>
-	<title>Votes en cours</title>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nouveau vote</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,10 +13,18 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h2>Votes en cours</h2>
-	<form method="post" action="running_votes_traitement.php">
+	<h2>Nouveau vote</h2>
+	<form method="get" action="new_vote.php">
+		<p>
+			<label for="nb_vote">Entrez le nombre de choix que vous voulez ajouter au vote : </label>
+			<input type="tel" name="nb_vote" id="nb_vote" placeholder="2" autofocus required>
+		</p>
+
+		<p>
+			<label for="send"></label>
+			<input type="submit" name="submit" value="Continuer">
+		</p>
 
 	</form>
-<?php $contenu = ob_get_clean(); ?>
-
-<?php require('template.php'); ?>
+</body>
+</html>

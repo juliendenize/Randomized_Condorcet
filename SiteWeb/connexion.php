@@ -1,7 +1,7 @@
-<?php $title = 'Votes en cours' ?>
-
-<?php ob_start(); ?>
-	<title>Votes en cours</title>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Se connecter</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,10 +13,21 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-	<h2>Votes en cours</h2>
-	<form method="post" action="running_votes_traitement.php">
-
+	<h2>Se connecter</h2>
+	<form method="post" action="traitement.php">
+		<p>
+			<label for="email">Votre adresse email : </label>
+			<input type="email" name="email" id="email" placeholder="Email" autofocus required>
+		</p>
+		<p>
+			<label for="password">Votre mot de passe : </label>
+			<input type="password" name="password" id="password" placeholder="Mot de passe" required>
+		</p>
+		<p>
+			<label for="check"></label>
+			<input type="submit" name="check" value="Valider">
+		</p>
 	</form>
-<?php $contenu = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+</body>
+</html>

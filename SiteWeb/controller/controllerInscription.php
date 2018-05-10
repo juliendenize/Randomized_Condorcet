@@ -1,12 +1,11 @@
 <?php
 
-require_once('Inscrits');
-
 function getInscrire() {
-  require('inscription.php')
+  require('../view/inscription.php');
 }
 
 function postInscrire() {
+  require('../model/Inscrit.php');
   if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['motDePasse'])) {
     $pseudo = $_POST['pseudo'];
     $email = $_POST['email'];
@@ -25,10 +24,11 @@ function postInscrire() {
       case 'inscrit':
         echo 'Tu as bien été ajouté à la base de données';
         break;
-    }
-    else {
-      echo 'Il manque un élément à remplir'
-    }
+      }
+  }
+  else {
+    echo 'Il manque un élément à remplir';
+  }
   // Redirection de l'utilisateur vers la page d'accueil
   header('Location: index.php');
 }

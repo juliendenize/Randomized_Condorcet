@@ -20,6 +20,6 @@
 			<input type="submit" name="submit" value="Envoyer">
 		</p>
 	</form>
-<?php ob_get_clean(); ?>
+<?php $contenu = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

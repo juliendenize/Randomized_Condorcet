@@ -1,13 +1,17 @@
 <?php
-  session_start()
+session_start();
 
-  include('controller.php')
-
-  if(isset($_GET['action']) ) {
-    $vue = $_GET['action'];
-    if( {
-
+if(isset($_GET['action'])) {
+  $vue = $_GET['action'];
+  if($vue == 'inscription') {
+		require('./controller/controllerInscription.php');
+    if(isset($_POST['pseudo']) || isset($_POST['email']) || isset($_POST['motDePasse'])) {
+      postInscrire();
     }
-    else include('bienvenue.php');
+    else {
+      getInscrire();
+    }
   }
-  else include('bienvenue.php');
+  else require('./view/bienvenue.php');
+}
+else require('./view/bienvenue.php');

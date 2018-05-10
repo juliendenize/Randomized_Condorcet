@@ -16,6 +16,6 @@
 			<input type="submit" name="check" value="Valider">
 		</p>
 	</form>
-<?php ob_get_clean(); ?>
+<?php $contenu = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>
