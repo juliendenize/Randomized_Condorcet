@@ -15,33 +15,37 @@
 			}
 
 			// Création du vote à l'aide d'une requête préparée
-			if(!empty($_POST['title']) && !empty($_POST['type_vote']))
+			//$nb_vote = $_GET['nb_vote'];
+			if(!empty($_POST['title']) && !empty($_POST['type_vote']) && !empty($_POST['date_begin']) && !empty($_POST['date_end']))
 			{
 				$title = $_POST['title'];
 				$type_vote = $_POST['type_vote'];
-
-				if (empty($_POST['date_begin']))
-				{
-					$date_begin = date('d-m-Y');
-				}
-
 				$date_begin = $_POST['date_begin'];
-
-				if (empty($_POST['date_end']))
-				{
-					$date_end = date('d-m-Y', strtotime('+1 year'));
-				}
-
 				$date_end = $_POST['date_end'];				
+
+				if (date('d-m-Y') < $date_begin)
+				{
+					$statute = "Nom commencé";
+				}
+				elseif (date('d-m-Y') > $date_end) 
+				{
+					$statute = "Terminé";
+				}
+				else
+				{
+					$statute = "En cours" ;
+				}
 
 				try
 				{
-					$req = $bdd->prepare('INSERT INTO votes(title, type_vote, date_begin, date_end) VALUES (title, type_vote, date_begin, date_end)');
+					$req = $bdd->prepare('INSERT INTO votes(title, nb_vote, type_vote, date_begin, date_end, statute) VALUES (:title, :nb_vote, :type_vote, :date_begin, :date_end, :statute)');
 					$req->execute(array(
 						'title' => $title,
+						'nb_vote' => $nb_vote,
 						'type_vote' => $type_vote,
 						'date_begin' => $date_begin,
-						'date_end' => $date_end));
+						'date_end' => $date_end,
+						'statute' => $statute));
 				}
 
 				catch(Exception $e)
@@ -51,15 +55,13 @@
 			}
 			
 			// Ajout des alternatives du vote
-			$nb_vote = $_GET['nb_vote'];
-
 			$nb = 1;
 			while ($nb <= $nb_vote)
 			{
 				$choix = $_POST['choix<?php echo $nb; ?>'];
 				try
 				{
-					$req = $bdd->prepare('INSERT INTO alternatives(choix) VALUES choix)');
+					$req = $bdd->prepare('INSERT INTO alternatives(choix) VALUES (:choix)');
 					$req->execute(array(
 						'choix' => $choix));
 				}
