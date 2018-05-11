@@ -1,4 +1,4 @@
-<?php $title = 'Inscription' ?>
+<?php $titre = 'Inscription' ?>
 
 <?php ob_start(); ?>
 	<h2>Inscription</h2>

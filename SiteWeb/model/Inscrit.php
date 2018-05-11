@@ -26,7 +26,7 @@ class Inscrit extends Model
       return 'email';
     }
     else {
-      $req -> closeCursor();
+      $req->closeCursor();
       $sql = 'SELECT pseudo FROM Inscrits WHERE pseudo = :pseudo'
       $parametres = array('pseudo' => this->pseudo)
       $req = this->executerRequete($sql, $parametres)
@@ -43,5 +43,4 @@ class Inscrit extends Model
       }
     }
   }
-
 }
