@@ -32,11 +32,11 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li class="active"> <a href="index.php">Accueil</a></li>
-            <li> <a href="running_votes.php">Votes en cours</a></li>
+            <li> <a href="index.php?action=votesEnCours">Votes en cours</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li> <a href="index.php?action=connexion">Connexion</a></li>
-            <li> <a href="inscription.php">Inscription</a></li>
+            <li> <a href="index.php?action=inscription">Inscription</a></li>
           </ul>
         </div>
       </div>

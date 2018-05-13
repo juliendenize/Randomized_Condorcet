@@ -1,34 +1,25 @@
 <?php
 
 function getInscrire() {
-  require('../view/inscription.php');
+  require('./view/inscription.php');
 }
 
 function postInscrire() {
-  require('../model/Inscrit.php');
-  if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['motDePasse'])) {
-    $pseudo = $_POST['pseudo'];
-    $email = $_POST['email'];
-    $motDePasse = $_POST['motDePasse'];
+  require('./model/Inscrit.php');
 
-    $utilisateur = new Inscrit($pseudo, $email, $motDePasse);
-    $resultatInscription = $utilisateur->inscrire();
+  $utilisateur = new Inscrit($_POST['email'], $_POST['motDePasse'], $_POST['pseudo']);
 
-    switch($resultatInscription) {
-      case 'email':
-        echo 'Mail déjà utilisé';
-        break;
-      case 'pseudo':
-        echo 'Pseudo déjà pris';
-        break;
-      case 'inscrit':
-        echo 'Tu as bien été ajouté à la base de données';
-        break;
-      }
+  if($utilisateur->existeEntree('Inscrits', 'pseudo', $utilisateur->pseudo)) {
+    echo 'Pseudo déjà pris';
+  }
+  elseif($utilisateur->existeEntree('Inscrits', 'email', $utilisateur->email)) {
+    echo 'Mail déjà pris';
   }
   else {
-    echo 'Il manque un élément à remplir';
+    $utilisateur->inscrire();
+    echo 'Inscrit';
   }
+
   // Redirection de l'utilisateur vers la page d'accueil
   header('Location: index.php');
 }

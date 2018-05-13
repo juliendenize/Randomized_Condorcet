@@ -1,46 +1,49 @@
 <?php
 
-require_once('Model');
-/**
- *
- */
+require_once('./model/Model.php');
+
 class Inscrit extends Model
 {
 
-  private $pseudo;
-  private $email;
-  private $motDePasse
+  public $pseudo;
+  public $email;
+  private $motDePasse;
 
-  public function __construct($pseudo, $email, $motDePasse)
+  public function __construct($email, $motDePasse, $pseudo = null)
   {
-    this->$pseudo = $pseudo;
-    this->$email = $email;
-    this->$motDePasse = $motDePasse;
+    $this->pseudo = $pseudo;
+    $this->email = $email;
+    $this->motDePasse = $motDePasse;
   }
 
   public function inscrire() {
-    $sql = 'SELECT email FROM Inscrits WHERE email = :email';
-    $parametres = array('email' => this->email);
-    $req = this->executerRequete($sql, $parametres);
-    if($requete -> fetch()) {
-      return 'email';
+    $sql = 'INSERT INTO Inscrits (pseudo, email, motDePasse) VALUES (:pseudo, :email, :motDePasse)';
+    $parametres = array(
+        'pseudo' => $this->pseudo,
+        'email' => $this->email,
+        'motDePasse' => $this->motDePasse);
+    $req = $this->executerRequete($sql, $parametres);
     }
-    else {
-      $req->closeCursor();
-      $sql = 'SELECT pseudo FROM Inscrits WHERE pseudo = :pseudo'
-      $parametres = array('pseudo' => this->pseudo)
-      $req = this->executerRequete($sql, $parametres)
-      if($requete -> fetch()) {
-        return 'pseudo';
-      }
-      else {
-        $req = $bdd->prepare('INSERT INTO Inscrits (pseudo, email, motDePasse) VALUES (:pseudo, :email, :motDePasse)');
-        $req->execute(array(
-          'pseudo' => this->pseudo,
-          'email' => this->email,
-          'password' => this->password));
-        return 'inscrit';
-      }
+
+  public function existeCompte() {
+    $sql = 'SELECT pseudo, email, motDePasse FROM Inscrits
+            WHERE email = :email AND motDePasse = :motDePasse';
+    $parametres = array('email' => $this->email, 'motDePasse' => $this->motDePasse);
+    $req = $this->executerRequete($sql, $parametres);
+    if($req->rowCount() == 1) {
+      $this->pseudo = $req->fetch()['pseudo'];
+      return $this->pseudo;
     }
+    else return false;
+  }
+
+  public function connecter() {
+    $_SESSION['connexion'] = true;
+    $_SESSION['pseudo'] = $this->pseudo;
+  }
+
+  public static function deconnecter() {
+    session_unregister('connexion');
+    session_unregister('pseudo');
   }
 }
