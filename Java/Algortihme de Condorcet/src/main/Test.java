@@ -1,18 +1,23 @@
 package main;
+
+/**
+ * Classe devenue obsolète parès l'intégration des tests unitaires.
+ */
+
 /**
  * <p><b>La classe Test permet d'effectuer des tests sans avoir à modifier beaucoup de code dans le main.</b>
  * Elle ne contient que des méthodes.</p>
  * <br>
  * @author julien
  */
-public class Test {
+//public class Test {
 	
 	/**
 	 * Teste la classe VoixAleatoire en créant plusieurs instances et en les affichant.<br>
 	 * @see VoixAleatoire
 	 * @see VoixAleatoire#toString()
 	 */
-	public void testVoixAleatoire() {
+/*	public void testVoixAleatoire() {
 		int nbVotes = 1;
 		int nbAlternatives = 5;
 		VoixAleatoire voix = null;
@@ -21,7 +26,7 @@ public class Test {
 			System.out.println(voix);
 		}
 	}
-	
+*/	
 	/**
 	 * <b>Teste la classe Condorcet et Voix.</b><br>
 	 * La méthode contient un tableau choix représentant chaque choix sous la forme: le votant, l'alternative et le rang.<br>
@@ -34,11 +39,11 @@ public class Test {
 	 *  4 2 3 4 0<br>
 	 *  @see Condorcet
 	 *  @see VoixChoisie
-	 *  @see VoixChoisie#addChoix(int, int)
+	 *  @see VoixChoisie#ajouterUnChoix(int, int)
 	 *  @see Condorcet#addVoix(Voix)
-	 *  @see Condorcet#lectureCompteur()
+	 *  @see Condorcet#lireCompteur()
 	 */
-	public void testCondorcet() {
+/*	public void testCondorcet() {
 		int nbAlternatives = 5;
 		int[][] choix =
 			{ 
@@ -69,51 +74,52 @@ public class Test {
 		
 		for (int i = 0; i < choix.length; i++) {
 			if (idVotant != choix[i][0]) {
-				election.addVoix(voix);
+				election.ajouterUneVoix(voix);
 				System.out.println(voix);
 				idVotant=choix[i][0];
 				voix = new VoixChoisie(idVotant, nbAlternatives);
 			}
-			voix.addChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
+			voix.ajouterUnChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
 		}
 		System.out.println(voix);
-		election.addVoix(voix);	
-		election.parcoursVoix();
-		election.lectureCompteur();
+		election.ajouterUneVoix(voix);	
+		election.parcourirLesVoix();
+		election.lireCompteur();
 	}
-
+	
 	/**
 	 * Fais le même test que {@link Test#testGraphe()} en testant en plus l'implémentation du graphe et ses méthodes.<br>
 	 * @see Test#testGraphe()
 	 * @see Graphe
 	 * @see VoixAleatoire
 	 */
-	public void testGrapheAleatoire() {
+/*	public void testGrapheAleatoire() {
 		int nbAlternatives = 3;
 		Condorcet election = new Condorcet(nbAlternatives);
 		VoixAleatoire voix = null;
 		for (int i = 0; i < nbAlternatives; i++) {
 			voix = new VoixAleatoire(i, nbAlternatives);
-			election.addVoix(voix);
+			election.ajouterUneVoix(voix);
 			System.out.println(voix);
 
 		}	
-		election.parcoursVoix();
-		election.lectureCompteur();
-		Graphe graphe = new Graphe(nbAlternatives, election.renvoiCompteur());
+		election.parcourirLesVoix();
+		election.lireCompteur();
+		Graphe graphe = new Graphe(nbAlternatives, election.retournerCompteur());
 		System.out.println();
-		graphe.retourneMatrice();
-		System.out.println("\n" + graphe.vainqueurGraphe());
+		graphe.retournerMatrice();
+		System.out.println("\n" + graphe.retournerVainqueurGraphe());
 		}
+*/
 	/**
 	 * Fais le même test que {@link Test#testCondorcet()} en testant en plus l'implémentation du graphe et ses méthodes.<br>
 	 * @see Test#testCondorcet()
 	 * @see Graphe
 	 * @see Graphe#Graphe(int, int[][])
-	 * @see Graphe#retourneMatrice()
-	 * @see Graphe#vainqueurGraphe()
+	 * @see Graphe#retournerMatrice()
+	 * @see Graphe#retournerVainqueurGraphe()
 	 */
-	public void testGraphe() {
+/*	public void testGraphe() {
 		int nbAlternatives = 5;
 		int[][] choix =
 			{ 
@@ -144,29 +150,29 @@ public class Test {
 		
 		for (int i = 0; i < choix.length; i++) {
 			if (idVotant != choix[i][0]) {
-				election.addVoix(voix);
+				election.ajouterUneVoix(voix);
 				System.out.println(voix);
 				idVotant=choix[i][0];
 				voix = new VoixChoisie(idVotant, nbAlternatives);
 			}
-			voix.addChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
+			voix.ajouterUnChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
 		}
 		System.out.println(voix);
-		election.addVoix(voix);	
-		election.parcoursVoix();
-		election.lectureCompteur();
-		Graphe graphe = new Graphe(nbAlternatives, election.renvoiCompteur());
+		election.ajouterUneVoix(voix);	
+		election.parcourirLesVoix();
+		election.lireCompteur();
+		Graphe graphe = new Graphe(nbAlternatives, election.retournerCompteur());
 		System.out.println();
-		graphe.retourneMatrice();
-		System.out.println("\n" + graphe.vainqueurGraphe());
+		graphe.retournerMatrice();
+		System.out.println("\n" + graphe.retournerVainqueurGraphe());
 		}
-	
+*/	
 	/**
 	 * Teste la fonction {@link Graphe#contientCycle()}.<br>
 	 * @see Graphe
 	 * @see Graphe#contientCycle()
 	 */
-	public void testDésignationVainqueurParMatchs() {
+/*	public void testDésignationVainqueurParMatchs() {
 		int[][] matrice = 
 			{ {0, 1, 0},
 			  {0, 0, 1},
@@ -176,12 +182,14 @@ public class Test {
 		if (graphe.contientCycle()) System.out.println("Cycle");
 		else System.out.println("Pas cycle");
 	}
-	
+*/	
 	/**
 	 * Teste le processus complet d'élection où 2 est vainqueur.<br>
-	 * @see Condorcet#election()
+	 * @see Condorcet#elireLeVainqueur()
 	 */
-	public void testElection() {
+
+	
+/*	public void testElection() {
 		int nbAlternatives = 3;
 		int[][] choix =
 			{ 
@@ -198,17 +206,18 @@ public class Test {
 		
 		for (int i = 0; i < choix.length; i++) {
 			if (idVotant != choix[i][0]) {
-				election.addVoix(voix);
+				election.ajouterUneVoix(voix);
 				System.out.println(voix);
 				idVotant=choix[i][0];
 				voix = new VoixChoisie(idVotant, nbAlternatives);
 			}
-			voix.addChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
+			voix.ajouterUnChoix(choix[i][1] - 1, choix[i][2]); // les alternatives sont comptées à partir de 1 d'où le -1 pour remplir le tableau classement de voix
 		}
 		System.out.println(voix);
-		election.addVoix(voix);	
-		election.parcoursVoix();
-		election.lectureCompteur();
-		System.out.println(election.election());
+		election.ajouterUneVoix(voix);	
+		election.parcourirLesVoix();
+		election.lireCompteur();
+		System.out.println(election.elireLeVainqueur());
 	}
 }
+*/	

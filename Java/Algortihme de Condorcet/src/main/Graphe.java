@@ -11,6 +11,7 @@ import java.util.Stack;
  * </ul>
  * </p><br>
  * @author julien
+ * @see test.GrapheTest
  */
 public class Graphe {
 	
@@ -35,7 +36,7 @@ public class Graphe {
 	 */
 	public Graphe(int nbAlternatives, int[][] compteur) {
 		this.nbNoeuds = nbAlternatives;
-		generationMatrice(compteur);
+		genererMatrice(compteur);
 	}
 	
 	/**
@@ -47,7 +48,7 @@ public class Graphe {
 	 * 				Le compteur de matchs passé au constructeur.
 	 * @see Graphe#Graphe(int, int[][])
 	 */
-	private void generationMatrice(int [][] compteur) {
+	private void genererMatrice(int [][] compteur) {
 		this.matrice = new int[nbNoeuds][nbNoeuds];
 		for (int i = 0; i < nbNoeuds; i++) {
 			for (int j = i + 1; j < nbNoeuds; j++) {
@@ -64,9 +65,10 @@ public class Graphe {
 	/**
 	 * Retourne la matrice.<br>
 	 * @see Graphe#matrice
+	 * @see test.GrapheTest#testRetournerMatrice()
 	 * @return La matrice du graphe sous forme d'un tableau à deux dimensions.
 	 */
-	public int[][] retourneMatrice() {
+	public int[][] retournerMatrice() {
 		return matrice;
 	}
 	
@@ -74,8 +76,9 @@ public class Graphe {
 	 * <b>Renvoie le vainqueur de Condorcet si il existe.</b><br>
 	 * Si un candidat i bat tous les autres candidats j alors i est le vainqueur de Condorcet.<br>
 	 * @return Renvoie le vainqueur de Condorcet si il existe sous la forme d'un entier. Si il n'existe pas renvoie 0.
+	 * @see test.GrapheTest#testRetournerVainqueurGraphe()
 	 */
-	public int vainqueurGraphe() {
+	public int retournerVainqueurGraphe() {
 		int vainqueur = -1;
 		boolean vainqueurTrouve = false;
 		for (int i = 0; i < nbNoeuds && vainqueurTrouve == false; i++) {
@@ -98,6 +101,7 @@ public class Graphe {
 	 * <b>Teste si le graphe contient un cycle en appliquant un parcous en profondeur pour chaque noeud.</b><br>
 	 * 	Si on arrive à retourner sur le noeud de départ il y a un cycle.  
 	 * @return Renvoie si il y a cycle sous forme de booléen, true si oui sinon non.
+	 * @see test.GrapheTest#testContientCycle()
 	 */
 	public boolean contientCycle() {
 		boolean[] noeudsVisite = null;
@@ -124,8 +128,9 @@ public class Graphe {
 	/**
 	 * Compte le nombre de match Gagnés pour chaque alternative et le nombre total de victoires. <br> 
 	 * @return Renvoie un tableau d'entier contenant les matchs gagnés pour chaque alternative et le nombre total de matchs gagnés.
+	 * @see test.GrapheTest#testCompterNbMatchsGagnes()
 	 */
-	public int[] compteurMatchGagnés() {
+	public int[] compterNbMatchsGagnes() {
 		int[] nbVictoires = new int[nbNoeuds + 1];
 		for(int i = 0; i < nbNoeuds; i ++) {
 			for(int j = 0; j < nbNoeuds; j++) {
@@ -138,5 +143,14 @@ public class Graphe {
 		return nbVictoires;
 	}
 	
-	
+	/**
+	 * Retourne le nombre de noeuds du graphe et le vainqueur sous forme de chaîne de caractères.
+	 * @return 
+	 * 			Chaîne de caractère donnant nombre de noeuds et vainqueur.
+	 * @see test.GrapheTest#testToString()
+	 */
+	public String toString() {
+		String str = "Il y a " + Integer.toString(nbNoeuds) + " noeuds et le vainqueur du graphe est " + Integer.toString(retournerVainqueurGraphe()) + ".";
+		return str;
+	}
 }

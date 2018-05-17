@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="false" key="delegateUpdating"/>
 	<item value="0" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 	<section name="javadoc">
-		<item value="public" key="access"/>
+		<item value="private" key="access"/>
 		<item value="false" key="noindex"/>
 		<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/javadoc.xml" key="antpath"/>
 		<item value="false" key="nodeprecatedlist"/>
@@ -20,12 +21,12 @@
 		<item value="true" key="splitindex"/>
 		<item value="true" key="fromStandard"/>
 		<item value="false" key="notree"/>
-		<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme%20de%20Condorcet/doc" key="destdir"/>
+		<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/Doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
 			<section name="Algortihme de Condorcet">
 				<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/javadoc.xml" key="antpath"/>
-				<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme%20de%20Condorcet/doc" key="destdir"/>
+				<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/Doc" key="destdir"/>
 				<item value="" key="href"/>
 			</section>
 		</section>
@@ -49,7 +50,7 @@
 		</section>
 	</section>
 	<section name="NewClassWizardPage">
-		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_constructor"/>
 		<item value="false" key="create_main"/>
 		<item value="true" key="create_unimplemented"/>
 	</section>
@@ -63,8 +64,8 @@
 	<section name="JavadocWizardDialog">
 		<item value="700" key="DIALOG_WIDTH"/>
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-		<item value="676" key="DIALOG_HEIGHT"/>
-		<item value="577" key="DIALOG_X_ORIGIN"/>
+		<item value="788" key="DIALOG_HEIGHT"/>
+		<item value="228" key="DIALOG_X_ORIGIN"/>
 		<item value="96" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="NewPackageWizardPage">
