@@ -1,4 +1,4 @@
-<?php $title = 'Accueil' ?>
+<?php $titre = 'Accueil' ?>
 
 <?php ob_start(); ?>
 	<div class="container">

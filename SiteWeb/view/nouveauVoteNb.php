@@ -3,10 +3,10 @@
 <?php ob_start(); ?>
 	<title>Nouveau vote</title>
 	<h2>Nouveau vote</h2>
-	<form method="get" action="new_vote.php">
+	<form method="post" action="index.php?action=nouveauVote">
 		<p>
 			<label for="nb_vote">Entrez le nombre de choix que vous voulez ajouter au vote : </label>
-			<input type="tel" name="nb_vote" id="nb_vote" placeholder="2" autofocus required>
+			<input type="tel" name="nbVote" id="nbVote" placeholder="2" autofocus required>
 		</p>
 
 		<p>

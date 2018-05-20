@@ -14,9 +14,6 @@
 </head>
 <body>
 	<h2>Votes en cours</h2>
-	<form method="post" action="running_votes_traitement.php">
-
-	</form>
 <?php $contenu = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

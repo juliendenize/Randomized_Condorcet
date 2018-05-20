@@ -1,4 +1,4 @@
-<?php $title = 'Se connecter' ?>
+<?php $titre = 'Se connecter' ?>
 
 <?php ob_start(); ?>
 	<h2>Se connecter</h2>

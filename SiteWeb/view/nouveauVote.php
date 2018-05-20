@@ -1,4 +1,4 @@
-<?php $title = 'Nouveau vote' ?>
+<?php $titre = 'Nouveau vote' ?>
 
 <?php ob_start(); ?>
 	<h2>Nouveau vote</h2>
