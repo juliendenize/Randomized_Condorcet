@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Votes en cours</title>
+	<title>Se connecter</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
 		body { padding-top: 70px; }
-	</style>
+    </style>
 
 </head>
 <body>
@@ -37,7 +37,7 @@
 					<li> <a href="running_votes.php">Votes en cours</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li> <a href="connexion.php">Connexion</a></li>
+					<li class="active"> <a href="connexion.php">Connexion</a></li>
 					<li> <a href="inscription.php">Inscription</a></li>
 				</ul>
 			</div>
@@ -45,41 +45,41 @@
 	</nav>
 
 	<div class="container">
-		<h1>Votes en cours</h1>
-		<p>
-		<table class="table table-striped">
-			<thead>
-				<th>Numéro</th>
-				<th>Titre</th>
-				<th>Type</th>
-				<th>Date début</th>
-				<th>Date fin</th>
-				<th>Administrateur</th>
-				<th>Statut</th>
-				<th>Voter</th>
-			</thead>
-			<tbody>
-				<?php
-				foreach ($Votes as $Vote)
-				{
-				?>
-				<tr>
-					<td><?php echo $Vote->id; ?></td>
-					<td><a href="votes.php?foo=<?php echo $Vote->id; ?>"><?php echo $Vote->titre; ?></td>
-					<td><?php echo $Vote->type; ?></td>
-					<td><?php echo $Vote->dateDebut; ?></td>
-					<td><?php echo $Vote->dateFin; ?></td>
-					<td><?php echo $Vote->statut; ?></td>
-					<td><?php echo $Vote->admin; ?></td>
-					<td><a class="btn btn-default" href="voter?foo=<?php echo $Vote->id; ?>" role="button">Voter</a></td>
-				</tr>
-				<?php
-				}
-				?>
-			</tbody>
-		</table>
-		</p>
-	</div>
+		<h1><?php echo $Vote->titre; ?></h1>
 
+		<div class="text-center">
+			<p><?php echo $Vote->dateDebut; ?></p>
+			<p><?php echo $Vote->dateFin; ?></p>
+			<p><?php echo $Vote->admin; ?></p>
+
+		<?php
+		if ($Vote->type == "public")
+		{
+			?>
+			<div class="text-right">Public</div>
+			<?php
+		}
+		else
+		{
+			?>
+			<div class="text-right">Privé</div>
+			<?php
+		}
+		?>
+
+		</div>
+
+		<h4><?php echo $Vote->description; ?></h4>
+
+		<h3>Alternatives : </h3>
+
+		<?php
+			foreach ($Alternatives as $Alternative)
+			{
+				echo $Alternatives->Alternative;
+			}
+		?>
+
+	</div>
 </body>
 </html>
