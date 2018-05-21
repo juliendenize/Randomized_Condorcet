@@ -1,5 +1,4 @@
 <?php
-
 /**
   * Controller pour gérer un vote.
   *
@@ -26,17 +25,16 @@ function getVote() {
       $alternatives = Alternative::recupererAlternatives($vote);
       require('./view/vote.php');
     }
-    elseif (isset($_SESSION['pseudo'])) {
-
+    elseif(isset($_SESSION['pseudo'])) {
+      $alternatives = Alternative::recupererAlternatives($vote);
+      require('./view/vote.php');
     }
     else {
-      echo 'Pas connecté';
-      //header('Location: index.php');
+      header('Location: index.php?erreur=connecteVoter');
     }
   }
   else {
-    echo 'Vote inexistant';
-    //header('Location: index.php');
+    header('Location: index.php?erreur=voteInexistant');
   }
 }
 
@@ -48,23 +46,23 @@ function fermerVote() {
   $idVote = (int)$_GET['idVote'];
   $vote = new Vote($idVote, null, null, null, null, null, null, null , null);
   if($vote->existeVote() && $vote->statut='ouvert'){
-		$aujourdhui= new DateTime();
-		if ($aujourdhui->diff($vote->dateFin)>0) {
-			//exec(java -jar Algo.jar, 'jdbc:mysql://localhost:3306/Condorcet' 'root' '' $vote->id);
-			$sql = 'UPDATE Votes SET statut=ferme WHERE id=:id';
-      $parametre = array('id' => $vote->id);
-      $vote->executerRequete($sql, $parametre);
+		//$aujourdhui= new DateTime();
+		//if ($aujourdhui->diff($vote->dateFin)>0) {
+		shell_exec("java -jar condorcet.jar 'jdbc:mysql://localhost:3306/Condorcet' 'root' 'root' $vote->id");
+    $sql = 'UPDATE Votes SET statut=\'ferme\' WHERE id=:id';
+    $parametre = array('id' => $vote->id);
+    $vote->executerRequete($sql, $parametre);
+    header('Location: index.php');
+	}
+	elseif ($vote->statut = 'ferme') {
+    header('Location: index.php?erreur=cloture');
 		}
-		elseif ($vote->statut = 'ferme') {
-			echo 'Le Vote '.$idVote.' est déjà clôturé.';
-      //header('Location: index.php');
-		}
-		   else {
-        echo $aujourdhui->diff($dateFin)->format('Vous pourrez clôturer le vote dans %d jours');
-        //header('Location: Index.php');
-		}
-  }
+  else {
+    //$valeur = $aujourdhui->diff($dateFin)->format('Vous pourrez clôturer le vote dans %d jours');
+    header('Location: index.php?erreur=pasCloture');
+	}
 }
+
 
 /**
   * Affiche le résultat d'un vote s'il existe.

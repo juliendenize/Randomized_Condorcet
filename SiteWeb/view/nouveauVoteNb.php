@@ -1,6 +1,11 @@
-<?php $titre = 'Nouveau vote' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Nouveau vote' ?>
 
 <?php ob_start();?>
+<div class="container">
 	<title>Nouveau vote</title>
 	<h2>Nouveau vote</h2>
 	<form method="post" action="/SiteWeb/index.php?action=nouveauVote">
@@ -15,8 +20,7 @@
 		</p>
 
 	</form>
-</body>
-</html>
+</div>
 <?php $contenu = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

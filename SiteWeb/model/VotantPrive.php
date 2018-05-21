@@ -14,6 +14,7 @@ require_once('./model/Model.php');
   * Définie par:
   * - L'ID du vote.
   * - L'ID de l'inscrit autorisé à participer au vote.
+  * @author julien
 **/
 class VotantPrive extends Model {
   /**

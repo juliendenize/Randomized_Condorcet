@@ -16,12 +16,13 @@ function getResultat() {
   if($vote->existeVote()) {
     $administrateur = new Inscrit($vote->idAdmin, null, null, null);
     $administrateur->existeCompte();
-    $alternatives = Alternative::recupererAlternatives($vote);
     $resultat = new Resultat($id, null);
-    $resultat->existeVainqueur;
+    $resultat->existeVainqueur();
+    $alternatives = Alternative::recupererAlternatives($vote);
+    $nomVainqueur = Alternative::recupererNom($resultat->idVote, $resultat->idAlternative);
     require('./view/resultat.php');
   }
   else {
-    header('Location: header.php?action=erreur&amp;amperreur=Ce vote n\'existe pas.');
+    header('Location: header.php?erreur=voteInexistant');
   }
 }

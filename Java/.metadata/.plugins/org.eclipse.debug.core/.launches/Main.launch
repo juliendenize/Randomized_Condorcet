@@ -7,5 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="main.Main"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="'jdbc:mysql://localhost:3306/Condorcet' 'root' 'root' '5'"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Algortihme de Condorcet"/>
 </launchConfiguration>

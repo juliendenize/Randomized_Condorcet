@@ -18,14 +18,14 @@ require_once('./model/Model.php');
 **/
 class Resultat extends Model {
   /**
-    * L'ID du vote dont c'est le résultat. Non modifiable.
+    * L'ID du vote dont c'est le résultat. Consultable.
   **/
-  private $idVote;
+  public $idVote;
 
   /**
-    * Le nom de l'alternative gagnante. Consultable.
+    * L'ID de l'alternative gagnante. Consultable.
   **/
-  public $nomAlternative;
+  public $idAlternative;
 
   /**
     * Constructeur de la classe Resultat.
@@ -45,11 +45,11 @@ class Resultat extends Model {
     * @return boolean True si le résultat existe, false sinon.
   **/
   public function existeVainqueur() {
-    $sql = 'SELECT nomAlternative FROM Resultats WHERE idVote = :idVote';
-    $parametre = array('idVote' => $idVote);
+    $sql = 'SELECT idAlternative FROM Resultats WHERE idVote = :idVote';
+    $parametre = array('idVote' => $this->idVote);
     $req = $this->executerRequete($sql, $parametre);
     if($req->rowCount() == 1) {
-      $this->nomAlternative = $req->fetch()['nomAlternative'];
+      $this->idAlternative = $req->fetch()['idAlternative'];
       return true;
     }
     else return false;

@@ -1,6 +1,11 @@
-<?php $titre = 'Nouveau vote' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Nouveau vote' ?>
 
 <?php ob_start(); ?>
+<div class="container">
 	<h2>Nouveau vote</h2>
 	<form method="post" action="/SiteWeb/index.php?action=nouveauVote">
 
@@ -14,8 +19,8 @@
 		</p>
 		<p>
 			Type de vote :
-			<input type="radio" name="type" value="private" id="private" required/>
-			<label for="private">Vote privé</label>
+			<input type="radio" name="type" value="prive" id="prive" required/>
+			<label for="prive">Vote privé</label>
 			<input type="radio" name="type" value="public" id="public"/>
 			<label for="public">Vote public</label>
 		</p>
@@ -46,6 +51,7 @@
 			<input type="submit" name="submit" value="Envoyer">
 		</p>
 	</form>
+</div>
 	<?php $contenu = ob_get_clean(); ?>
 
 	<?php require('template.php'); ?>

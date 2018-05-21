@@ -170,13 +170,14 @@ class Vote extends Model {
       $req = $utilisateur->executerRequete($sql);
     }
     else{
+      //Le OR type='prive' devra être supprimé lorsque les votants pourront être sélectionnés.
       $sql = 'SELECT V.id as id, titre, description, type, nbAlternatives, dateDebut, dateFin, statut, idAdmin
               FROM Votes V JOIN VotantsPrives ON V.id = idVote JOIN Inscrits I ON idInscrit = I.id
               WHERE pseudo = :pseudo
               UNION
               SELECT id, titre, description, type, nbAlternatives, dateDebut, dateFin, statut, idAdmin
               FROM Votes
-              WHERE type=\'public\'';
+              WHERE type=\'public\' or type =\'prive\'';
       $parametres = array('pseudo' => $utilisateur->pseudo);
       $req = $utilisateur->executerRequete($sql, $parametres);
     }

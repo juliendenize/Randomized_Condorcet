@@ -16,7 +16,7 @@ function getNouveauVoteNb() {
   if(isset($_SESSION['pseudo'])) {
     require('./view/nouveauVoteNb.php');
   }
-  else echo 'Il faut être connecté pour créer un vote';
+  else header('Location: index.php?erreur=connecteVote');
 }
 
 /**
@@ -42,7 +42,7 @@ function postNouveauVote() {
                    'ouvert',
                    $_SESSION['id']);
   if($vote->existeEntree('titre', $vote->titre)) {
-    echo 'titre';
+    header('Location: index.php?erreur=titre');
   }
   else {
     require('./model/Alternative.php');

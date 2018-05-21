@@ -1,4 +1,8 @@
-<?php $titre = "Consultation Vote"; ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = "Consultation Vote"; ?>
 
 <?php ob_start(); ?>
 	<div class="container">

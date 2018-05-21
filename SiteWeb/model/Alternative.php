@@ -71,6 +71,7 @@ class Alternative extends Model {
 
   /**
     * Récupère les alternatives dans la base de données du vote en paramètre.
+    * @param vote Le vote dont on récupère les alternatives
   **/
   public static function recupererAlternatives(Vote $vote) {
     $sql = 'SELECT id, idVote, nom FROM Alternatives WHERE idVote = :idVote';
@@ -80,5 +81,13 @@ class Alternative extends Model {
       $tableau[] = new Alternative($donnees['id'], $donnees['idVote'], $donnees['nom']);
     }
     return $tableau;
+  }
+
+  public static function recupererNom($idVote, $idAlternative) {
+    $alternative = new Alternative(null, null);
+    $sql = 'SELECT nom FROM Alternatives WHERE idVote=:idVote AND id = :idAlternative';
+    $parametres = array('idVote' => $idVote, 'idAlternative' => $idAlternative);
+    $req = $alternative->executerRequete($sql, $parametres);
+    return $req->fetch()['nom'];
   }
 }

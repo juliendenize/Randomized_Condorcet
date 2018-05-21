@@ -1,4 +1,8 @@
-<?php $titre = 'Accueil' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Accueil' ?>
 
 <?php ob_start(); ?>
 	<div class="container">

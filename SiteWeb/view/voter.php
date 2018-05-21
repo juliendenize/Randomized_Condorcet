@@ -1,4 +1,8 @@
-<?php $titre = 'Voter' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Voter' ?>
 
 <?php ob_start(); ?>
 	<div class="container">
@@ -15,7 +19,7 @@
 					?>
 					<tr>
 						<label for=alternative<?php echo htmlspecialchars($alternative->id); ?> >Alternative <?php echo htmlspecialchars($alternative->id); ?> : </label>
-						<input type="tel" class="form-control" name="alternative<?php echo htmlspecialchars($alternative->id); ?>" id="alternative<?php echo htmlspecialchars($alternative->id); ?>" autofocus>
+						<input type="number" min="1" max='<<?php htmlspecialchars($vote->nbAlternatives)?>' class="form-control" name="alternative<?php echo htmlspecialchars($alternative->id); ?>" id="alternative<?php echo htmlspecialchars($alternative->id);?>" autofocus required>
 					</tr>
 					<?php
 				}

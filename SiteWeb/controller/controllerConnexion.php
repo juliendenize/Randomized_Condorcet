@@ -26,7 +26,7 @@ function postConnexion() {
     header('Location: index.php');
   }
   else {
-    echo 'Erreur mail ou mot de passe';
+    header('Location: index.php?erreur=connexion');
   }
 }
 

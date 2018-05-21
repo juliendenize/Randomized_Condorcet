@@ -1,4 +1,8 @@
-<?php $titre = 'Votes en cours' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Votes en cours' ?>
 
 <?php ob_start(); ?>
 	<div class="container">
@@ -16,13 +20,13 @@
 				<th>Statut</th>
 				<th>Voter</th>
 			</thead>
-			<tbody>
+		<tbody>
 				<?php
 				foreach ($votes as $vote){
 				?>
 				<tr>
 					<td><?php echo htmlspecialchars($vote->id); ?></td>
-					<td><a href="/SiteWeb/index.php?action=consulterVote&amp;idVote=<?php echo $vote->id; ?>"><?php echo $vote->titre; ?></td>
+					<td><a href="/SiteWeb/index.php?action=consulterVote&amp;idVote=<?php echo $vote->id; ?>"><?php echo $vote->titre; ?></a></td>
 					<td><?php echo htmlspecialchars($vote->type); ?></td>
 					<td><?php echo htmlspecialchars($vote->dateDebut); ?></td>
 					<td><?php echo htmlspecialchars($vote->dateFin); ?></td>
@@ -47,10 +51,12 @@
 				<?php
 				}
 				?>
-				</td>
-			</tbody>
-		</table>
-	<?php }
+					</td>
+			</tr>
+		<?php } ?>
+		</tbody>
+	</table>
+	<?php
 	}
 	else  echo "Il n'y a aucun vote en cours.";?>
 		</p>

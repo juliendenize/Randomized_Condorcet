@@ -1,6 +1,11 @@
-<?php $titre = 'Se connecter' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Se connecter' ?>
 
 <?php ob_start(); ?>
+<div class="container">
 	<h2>Se connecter</h2>
 	<form method="post" action="/SiteWeb/index.php?action=connexion">
 		<p>
@@ -16,6 +21,7 @@
 			<input type="submit" name="check" value="Valider">
 		</p>
 	</form>
+</div>
 <?php $contenu = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

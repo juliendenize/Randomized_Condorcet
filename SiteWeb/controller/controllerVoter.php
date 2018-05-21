@@ -17,15 +17,15 @@ require('./model/Vote.php');
 function getVoter() {
   $id = (int)$_GET['idVote'];
   $vote = new Vote($id, null, null, null, null, null, null, null, null);
-  if($vote->existeVote($id)) {
-    require('./model/Alternative.php');
-    $alternatives = Alternative::recupererAlternatives($vote);
-    require('./view/voter.php');
+  if($vote->existeVote($id)){
+    if(($vote->type == 'prive' && isset($_SESSION['pseudo'])) || $vote->type == 'public') {
+      require('./model/Alternative.php');
+      $alternatives = Alternative::recupererAlternatives($vote);
+      require('./view/voter.php');
+    }
+    else header('Location: index.php?erreur=connecteVoter');
   }
-  else {
-    echo 'Vote inexistant';
-    //header('Location: index.php');
-  }
+  else header('Location: index.php?erreur=voteInexistant');
 }
 
 /**
@@ -41,8 +41,7 @@ function postVoter() {
     $utilisateur = new Inscrit($_SESSION['id'], null, null, null);
     $utilisateur->existeCompte();
     if(ChoixPrive::aVote($utilisateur->id, $idVote)){
-      echo 'A déjà voté';
-      //header('Location: index.php');
+      header('Location: index.php?erreur=aVote');
     }
   }
   else $utilisateur = null;
@@ -52,10 +51,8 @@ function postVoter() {
       $idVotant = ChoixPublic::retourneIdVotant();
     }
     for($i = 1; $i <= $vote->nbAlternatives; $i++) {
-      echo 'For:'.$i;
       $rang = (int)$_POST['alternative'.$i];
       if($utilisateur == null) {
-        echo'Utilisateur null';
         $choix = new ChoixPublic($idVotant, $idVote, $i, $rang);
         $choix->ajouterChoixPublic();
       }
@@ -64,10 +61,9 @@ function postVoter() {
         $choix->ajouterChoixPrive();
       }
     }
-    //header('Location: index.php');
+    header('Location: index.php');
   }
   else {
-    echo 'vote inexistant';
-    //header('Location: index.php');
+    header('Location: index.php?erreur=voteInexistant');
   }
 }

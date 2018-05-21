@@ -25,15 +25,12 @@ function postInscrire() {
   $utilisateur = new Inscrit(null, $_POST['pseudo'], $email, $motDePasse);
 
   if($utilisateur->existeEntree('pseudo', $utilisateur->pseudo)) {
-    echo 'Pseudo déjà pris';
+    header('Location: index.php?erreur=pseudo');
   }
   elseif($utilisateur->existeEntree('email', $utilisateur->email)) {
-    echo 'Mail déjà pris';
+    header('Location: index.php?erreur=email');
   }
-  else {
-    $utilisateur->inscrire();
-    echo 'Inscrit';
-  }
+  else $utilisateur->inscrire();
 
   // Redirection de l'utilisateur vers la page d'accueil.
   header('Location: index.php');

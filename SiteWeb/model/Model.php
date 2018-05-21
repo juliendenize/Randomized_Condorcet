@@ -24,7 +24,7 @@ abstract class Model
     * @param parametres Les paramètres de la requête (optionnels)
     * @return req Le résultat de la requête
   **/
-  protected function executerRequete($sql, $parametres = null) {
+  public function executerRequete($sql, $parametres = null) {
     if ($parametres == null) {
       $req = $this->dbConnect()->query($sql);
     }
@@ -57,7 +57,7 @@ abstract class Model
   **/
   private function dbConnect(){
     try {
-      $bdd = new PDO('mysql:host=localhost;dbname=Condorcet;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // à modifier quand on aura un hôte
+      $bdd = new PDO('mysql:host=localhost;dbname=Condorcet;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // à modifier quand on aura un hôte
     }
     catch (Exception $e) {
       die('Erreur : ' . $e->getMessage());

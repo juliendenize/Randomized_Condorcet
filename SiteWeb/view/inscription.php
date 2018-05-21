@@ -1,6 +1,11 @@
-<?php $titre = 'Inscription' ?>
+<?php
+/**
+	* @author Estelle
+**/
+$titre = 'Inscription' ?>
 
 <?php ob_start(); ?>
+<div class="container">
 	<h2>Inscription</h2>
 	<form method="post" action="/SiteWeb/index.php?action=inscription">
 		<p>
@@ -20,6 +25,7 @@
 			<input type="submit" name="submit" value="Envoyer">
 		</p>
 	</form>
+</div>
 <?php $contenu = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>
