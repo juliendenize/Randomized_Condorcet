@@ -33,12 +33,26 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav">
-					<li class="active"> <a href="index.php">Accueil</a></li>
+					<li> <a href="index.php">Accueil</a></li>
 					<li> <a href="running_votes.php">Votes en cours</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li> <a href="connexion.php">Connexion</a></li>
-					<li> <a href="inscription.php">Inscription</a></li>
+					<?php
+					if (isset $session_pseudo)
+					{
+					?>
+						<li><?php echo $pseudo; ?></li>
+						<li><a href="deconnexion.php">Déconnexion</a></li>
+					<?php
+					}
+					else
+					{
+						?>
+						<li> <a href="connexion.php">Connexion</a></li>
+						<li> <a href="inscription.php">Inscription</a></li>
+					<?php
+					}
+					?>
 				</ul>
 			</div>
 		</div>
