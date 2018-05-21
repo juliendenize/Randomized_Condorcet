@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 	<h2>Se connecter</h2>
-	<form method="post" action="index.php?action=connexion">
+	<form method="post" action="/SiteWeb/index.php?action=connexion">
 		<p>
 			<label for="email">Votre adresse email : </label>
 			<input type="email" name="email" id="email" placeholder="Email" autofocus required>

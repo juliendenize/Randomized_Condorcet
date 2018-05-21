@@ -20,8 +20,9 @@ function getInscrire() {
 function postInscrire() {
   require('./model/Inscrit.php');
   $email = strtolower($_POST['email']);
+  $motDePasse = sha1($_POST['motDePasse']);
 
-  $utilisateur = new Inscrit(null, $email, $_POST['motDePasse'], $_POST['pseudo']);
+  $utilisateur = new Inscrit(null, $_POST['pseudo'], $email, $motDePasse);
 
   if($utilisateur->existeEntree('pseudo', $utilisateur->pseudo)) {
     echo 'Pseudo déjà pris';

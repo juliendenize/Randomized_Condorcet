@@ -2,7 +2,7 @@
 
 <?php ob_start(); ?>
 	<h2>Inscription</h2>
-	<form method="post" action="index.php?action=inscription">
+	<form method="post" action="/SiteWeb/index.php?action=inscription">
 		<p>
 			<label for="pseudo">Votre pseudo : </label>
 			<input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required>

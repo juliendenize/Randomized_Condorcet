@@ -3,7 +3,7 @@
   <head>
     <title><?= $titre ?></title>
 
-    <link rel="stylesheet" type="text/css" href="../public/style.css">
+    <link rel="stylesheet" type="text/css" href="SiteWeb/public/style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -31,16 +31,28 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class="active"> <a href="index.php">Accueil</a></li>
-            <li> <a href="index.php?action=votesEnCours">Votes en cours</a></li>
+            <li> <a href="/SiteWeb/index.php">Accueil</a></li>
+            <li> <a href="/SiteWeb/index.php?action=tousLesVotes">Votes en cours</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li> <a href="index.php?action=connexion">Connexion</a></li>
-            <li> <a href="index.php?action=inscription">Inscription</a></li>
-          </ul>
-        </div>
+					<?php
+					if (isset($_SESSION['pseudo'])){
+					?>
+						<li><a><?php echo htmlspecialchars($_SESSION['pseudo']);?></a></li>
+						<li><a href="/SiteWeb/index.php?action=deconnexion">Déconnexion</a></li>
+					<?php
+					}
+					else{
+						?>
+						<li> <a href="/SiteWeb/index.php?action=connexion">Connexion</a></li>
+						<li> <a href="/SiteWeb/index.php?action=inscription">Inscription</a></li>
+					<?php
+					}
+					?>
+				</ul>
       </div>
-    </nav>
+    </div>
+  </nav>
     <?= $contenu ?>
   </body>
 </html>

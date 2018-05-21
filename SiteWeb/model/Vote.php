@@ -88,7 +88,7 @@ class Vote extends Model {
     * @param statut Le statut du vote
     * @param idAdmin L'ID de l'administrateur du vote
   **/
-  public function __construct($id = null, $titre = null, $type = null, $nbAlternatives = null, $dateDebut = null, $dateFin = null,$statut = null, $idAdmin = null){
+  public function __construct($id = null, $titre = null, $description = null, $type = null, $nbAlternatives = null, $dateDebut = null, $dateFin = null,$statut = null, $idAdmin = null){
     $this->id = $id;
     $this->titre= $titre;
     $this->description = $description;
@@ -108,9 +108,9 @@ class Vote extends Model {
     $sql = 'INSERT INTO Votes(titre, description, type, nbAlternatives, dateDebut, dateFin, statut, idAdmin)
             VALUES (:titre, :description, :type, :nbAlternatives, :dateDebut, :dateFin, :statut, :idAdmin)';
     $parametres = array('titre' => $this->titre,
-                        'description' => $this->description;
+                        'description' => $this->description,
                         'type' => $this->type,
-                        'nbAlternatives' => $this->nbAlternatives
+                        'nbAlternatives' => $this->nbAlternatives,
                         'dateDebut'=> $this->dateDebut,
                         'dateFin' => $this->dateFin,
                         'statut' => $this->statut,
@@ -144,33 +144,57 @@ class Vote extends Model {
   }
 
   /**
+    * Initialise l'ID du vote dont c'est l'instance. On ne teste pas l'existence car on la connait.
+    *
+    * @return idVote L'ID du vote
+  **/
+  public function initialiseIdVote() {
+    $sql = "SELECT id FROM Votes WHERE titre = :titre";
+    $parametre = array('titre' => $this->titre);
+    $req = $this->executerRequete($sql, $parametre);
+    $this->id = $req->fetch()['id'];
+  }
+  /**
     * Récupère les votes dans la base de données dont l'utilisateur a accès.
     *
+    * @param utilisateur null si il n'y a pas d'utilisateur connecté, sinon utilisateur connecté
     * @return array Tableau contenant les votes.
   **/
   public static function recupererVotes(Inscrit $utilisateur = null) {
     if($utilisateur == null) {
-      $sql = 'SELECT id, type, dateDebut, dateFin, titre, statut, admin, nbAlternatives
+      //Pour pouvoir accéder à la méthode executerRequete
+      $utilisateur = new Inscrit(null, null);
+      $sql = 'SELECT id, titre, description, type, nbAlternatives, dateDebut, dateFin, statut, idAdmin
               FROM Votes
               WHERE type=\'public\'';
       $req = $utilisateur->executerRequete($sql);
     }
     else{
-      $sql = 'SELECT id, type, dateDebut, dateFin, titre, statut, admin, nbAlternatives
-              FROM Votes JOIN VotantsPrivés ON id = idVote JOIN Inscrits I ON idInscrit = I.id
+      $sql = 'SELECT V.id as id, titre, description, type, nbAlternatives, dateDebut, dateFin, statut, idAdmin
+              FROM Votes V JOIN VotantsPrives ON V.id = idVote JOIN Inscrits I ON idInscrit = I.id
               WHERE pseudo = :pseudo
               UNION
-              SELECT id, type, dateDebut, dateFin, titre, statut, admin, nbAlternatives
+              SELECT id, titre, description, type, nbAlternatives, dateDebut, dateFin, statut, idAdmin
               FROM Votes
               WHERE type=\'public\'';
       $parametres = array('pseudo' => $utilisateur->pseudo);
-      $req = $utilisateur->executerRequete($sql, $paremetres);
+      $req = $utilisateur->executerRequete($sql, $parametres);
     }
-    while($donnee = $req->fetch()) {
-      $array[] = new Vote($donnee['id'], $donnee['type'], $donnee['dateDebut'],
-                          $donnee['dateFin'], $donnee['titre'], $donnee['statut'],
-                          $donnee['admin'], $donnee['nbAlternatives']);
+    if($req->rowCount() == 0) return null;
+    while($donnees = $req->fetch()) {
+      $tableau[] = new Vote($donnees['id'], $donnees['titre'], $donnees['description'], $donnees['type'],
+                            $donnees['nbAlternatives'], $donnees['dateDebut'], $donnees['dateFin'],
+                            $donnees['statut'],$donnees['idAdmin']);
     }
-    return $array;
+    return $tableau;
+  }
+
+  /**
+    * Récupère le pseudo de l'administrateur du vote représenté par l'instance.
+  **/
+  public function getAdmin() {
+    $sql = 'SELECT pseudo FROM Inscrits WHERE id=:idAdmin';
+    $parametre = array('idAdmin' => $this->idAdmin);
+    return $this->executerRequete($sql, $parametre)->fetch()['pseudo'];
   }
 }

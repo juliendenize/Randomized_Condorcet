@@ -20,19 +20,19 @@ require_once('./model/Model.php');
 class Inscrit extends Model
 {
   /**
-    * L'ID de l'inscrit. Non modifiable.
+    * L'ID de l'inscrit. Consultable.
   **/
-  private $id;
+  public $id;
 
   /**
-    * Le pseudo de l'inscrit. Non modifiable.
+    * Le pseudo de l'inscrit. Consultable.
   **/
-  private $pseudo;
+  public $pseudo;
 
   /**
-    * Le mail de l'inscrit. Non modifiable.
+    * Le mail de l'inscrit. Consultable.
   **/
-  private $email;
+  public $email;
 
   /**
     * Le mot de passe de l'inscrit. Non modifiable.
@@ -94,13 +94,17 @@ class Inscrit extends Model
     * Connecte l'inscrit représenté par l'instance.
   **/
   public function connecter() {
-    $_SESSION['connexion'] = $this->pseudo;
+    $_SESSION['pseudo'] = $this->pseudo;
+    $_SESSION['email'] = $this->email;
+    $_SESSION['id'] = $this->id;
   }
 
   /**
     * Déconnecte l'inscrit représenté par l'instance.
   **/
   public static function deconnecter() {
-    session_unregister('connexion');
+    unset($_SESSION['pseudo']);
+    unset($_SESSION['email']);
+    unset($_SESSION['id']);
   }
 }

@@ -23,9 +23,9 @@ class Resultat extends Model {
   private $idVote;
 
   /**
-    * Le nom de l'alternative gagnante. Non modifiable.
+    * Le nom de l'alternative gagnante. Consultable.
   **/
-  private $nomAlternative;
+  public $nomAlternative;
 
   /**
     * Constructeur de la classe Resultat.
@@ -34,17 +34,17 @@ class Resultat extends Model {
     * @param idVote L'ID du vote dont c'est le résultat
     * @param nomAlternative Le nom de l'alternative gagnante
   **/
-  public __construct($idVote = null, $nomAlternative = null) {
+  public function __construct($idVote = null, $nomAlternative = null) {
     $this->idVote = $idVote;
     $this->nomAlternative= $nomAlternative;
-    $this->table='Resultats'
+    $this->table='Resultats';
   }
 
   /**
     * Renvoie true et initialise le vainqueur du vote défini par son ID si le résultat existe.
     * @return boolean True si le résultat existe, false sinon.
   **/
-  public existeVainqueur() {
+  public function existeVainqueur() {
     $sql = 'SELECT nomAlternative FROM Resultats WHERE idVote = :idVote';
     $parametre = array('idVote' => $idVote);
     $req = $this->executerRequete($sql, $parametre);

@@ -3,7 +3,7 @@
 /**
   * Charge la classe Choix.
 **/
-require_once('./model/Choix.php')
+require_once('./model/Choix.php');
 
 /**
   * Classe ChoixPrive.
@@ -32,17 +32,30 @@ class ChoixPrive extends Choix {
     * @param idAlternative L'ID de l'alternative du choix
     * @param rang Le rang choisi de l'alternative
   **/
-  public __construct($idInscrit = null, $idVote = null, $idAlternative = null, $rang = null, $idVotant = null) {
+  public function __construct($idInscrit = null, $idVote = null, $idAlternative = null, $rang = null, $idVotant = null) {
     parent::__construct($idVote, $idAlternative, $rang);
     $this->idInscrit = $idInscrit;
     $this->table = 'ChoixPrives';
-    $this->attribut = 'idInscrit'
+    $this->attribut = 'idInscrit';
   }
 
   /**
     * Ajoute le choix représenté par l'instance dans la base de données.
   **/
-  public ajouterChoixPrive() {
-    $this->ajouterChoix('idInscrit', $this->idVotant);
+  public function ajouterChoixPrive() {
+    $this->ajouterChoix($this->idInscrit);
+  }
+
+  /**
+    * Vérifie si l'utilisateur a déjà voté.
+    * @return boolean True si l'utilisateur a voté false sinon.
+  **/
+  public static function aVote($idInscrit, $idVote) {
+    $choix = new ChoixPrive(null, null, null, null);
+    $sql = 'SELECT * FROM ChoixPrives WHERE idInscrit=:idInscrit AND idVote=:idVote';
+    $parametres = array('idInscrit' => $idInscrit, 'idVote' => $idVote);
+    $req = $choix->executerRequete($sql, $parametres);
+    if($req->rowCount() >= 1) return true;
+    else return false;
   }
 }

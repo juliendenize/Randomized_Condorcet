@@ -32,7 +32,7 @@ class ChoixPublic extends Choix {
     * @param idAlternative L'ID de l'alternative du choix
     * @param rang Le rang choisi de l'alternative
   **/
-  public __construct($idVotant = null, $idVote = null, $idAlternative = null, $rang = null, $idVotant = null) {
+  public function __construct($idVotant = null, $idVote = null, $idAlternative = null, $rang = null) {
     parent::__construct($idVote, $idAlternative, $rang);
     $this->idVotant = $idVotant;
     $this->table = 'ChoixPublics';
@@ -42,7 +42,24 @@ class ChoixPublic extends Choix {
   /**
     * Ajoute le choix représenté par l'instance dans la base de données.
   **/
-  public ajouterChoixPublic() {
-    $this->ajouterChoix('idVotant', $this->idVotant);
+  public function ajouterChoixPublic() {
+    $this->ajouterChoix($this->idVotant);
+  }
+
+  /**
+    * Renvoie un idVotant libre pour rentrer des choix.
+    * @return idVotant L'ID votant libre c'est à dire une incrémentation du dernier.
+  **/
+  public static function retourneIdVotant() {
+    $choix = new ChoixPublic(null, null, null, null);
+    $sql = 'SELECT idVotant FROM ChoixPublics ORDER BY idVotant DESC LIMIT 1';
+    $req = $choix->executerRequete($sql);
+    if($req->rowCount() == 1) {
+      echo'row 1';
+      $idVotant = $req->fetch()['idVotant'] + 1;
+      echo'idVotant ='.$idVotant;
+      }
+    else $idVotant = 1;
+    return $idVotant;
   }
 }

@@ -19,12 +19,22 @@ function getConnexion() {
 function postConnexion() {
   require('./model/Inscrit.php');
   $email = strtolower($_POST['email']);
-  $utilisateur = new Inscrit(null, null, $email, $_POST['motDePasse']);
+  $motDePasse = sha1($_POST['motDePasse']);
+  $utilisateur = new Inscrit(null, null, $email, $motDePasse);
   if ($utilisateur->existeCompte()) {
-    echo 'utilisateur connecté';
     $utilisateur->connecter();
+    header('Location: index.php');
   }
   else {
     echo 'Erreur mail ou mot de passe';
   }
+}
+
+/**
+  * Déconnecte l'utilisateur.
+**/
+function faireDeconnecter() {
+  require('./model/Inscrit.php');
+  Inscrit::deconnecter();
+  header('Location: index.php');
 }
