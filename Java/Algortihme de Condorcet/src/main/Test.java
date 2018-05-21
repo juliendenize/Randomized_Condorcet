@@ -1,7 +1,7 @@
 package main;
 
 /**
- * Classe devenue obsolète parès l'intégration des tests unitaires.
+ * Classe devenue obsolète après l'intégration des tests unitaires.
  */
 
 /**

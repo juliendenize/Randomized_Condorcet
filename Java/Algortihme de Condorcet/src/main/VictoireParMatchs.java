@@ -4,7 +4,7 @@ import main.Condorcet;
 
 /**
  * <p>Dans le cas où un cycle n'est pas présent dans le graphe des victoires, <b>le vainqueur est celui qui a gagné le plus de matchs.</b><br>
- * La Classe trouve ce vainqueur si il en existe un unique <b>sinon elle choisit uniformément parmis les alternatives qui ont gagné le plus de matchs.<br>.</b><br>
+ * La Classe trouve ce vainqueur si il en existe un unique <b>sinon elle choisit uniformément parmi les alternatives qui ont gagné le plus de matchs.<br>.</b><br>
  * Elle est définie par:
  * <ul>
  * 	<li>Le vainqueur ou le vainqueur choisi.</li>
@@ -30,7 +30,7 @@ public class VictoireParMatchs {
 	private int maxMatchsGagnes;
 	
 	/**
-	 * Tableau d'entier contenant le nombre de matchs gagnés pour chaque alternatives. Non modifiable.
+	 * Tableau d'entier contenant le nombre de matchs gagnés pour chaque alternative. Non modifiable.
 	 */
 	private int[] nbMatchsGagnes;
 	
@@ -47,7 +47,7 @@ public class VictoireParMatchs {
 	/**
 	 * Constructeur de la Classe VictoireParMatchs.<br>
 	 * @param nbMatchsGagnes
-	 * 			Tableau d'entier contenant pour chaque alternatives le nombre de matchs gagnés.
+	 * 			Tableau d'entier contenant pour chaque alternative le nombre de matchs gagnés.
 	 * @see VictoireParMatchs#compterNbVainqueur()
 	 * @see VictoireParMatchs#designerUnVainqueurParLoiUniforme()
 	 * @see VictoireParMatchs#trouverMaximumMatchsGagnes()
@@ -65,7 +65,7 @@ public class VictoireParMatchs {
 	}
 	
 	/**
-	 * Calcul le nombre maximum de match qu'une alternative a gagné.<br>
+	 * Calcul le nombre maximum de matchs qu'une alternative a gagné.<br>
 	 * Renvoie ce nombre maximum.<br>
 	 */
 	private void trouverMaximumMatchsGagnes() {
@@ -77,8 +77,8 @@ public class VictoireParMatchs {
 	}
 	
 	/**
-	 * Loi de proba uniforme pour désigner le vainqueur parmis la liste des alternatives en tête (même nombre de matchs gagnés).<br>
-	 * On parcourt le tableau nbMatchsGagnes pour trouver le vainqueur selectionne par un nombre aleatoire allant de 1 au nombre de vainqueurs.<br> 			
+	 * Loi de proba uniforme pour désigner le vainqueur parmi la liste des alternatives en tête (même nombre de matchs gagnés).<br>
+	 * On parcourt le tableau nbMatchsGagnes pour trouver le vainqueur selectionné par un nombre aleatoire allant de 1 au nombre de vainqueurs.<br> 			
 	 */
 	private void designerUnVainqueurParLoiUniforme() {
 		boolean vainqueurTrouve = false;

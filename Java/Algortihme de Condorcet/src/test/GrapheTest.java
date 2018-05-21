@@ -122,7 +122,7 @@ public class GrapheTest {
 	}
 	
 	/**
-	 * Teste la méthode {@link main.Graphe#toString()} en vérifiant qu'elle renvoie bien la chaîne de caractère représentant le graphe testé.<br>
+	 * Teste la méthode {@link main.Graphe#toString()} en vérifiant qu'elle renvoie bien la chaîne de caractères représentant le graphe testé.<br>
 	 * @see main.Graphe#toString()
 	 */
 	@Test

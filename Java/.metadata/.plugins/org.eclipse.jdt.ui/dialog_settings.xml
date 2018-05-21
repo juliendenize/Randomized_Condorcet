@@ -51,12 +51,12 @@
 		<item value="true" key="splitindex"/>
 		<item value="true" key="fromStandard"/>
 		<item value="false" key="notree"/>
-		<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/Doc" key="destdir"/>
+		<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/JavaDoc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
 			<section name="Algortihme de Condorcet">
 				<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/javadoc.xml" key="antpath"/>
-				<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/Doc" key="destdir"/>
+				<item value="/home/julien/PRO3600-18-GIB-16/Java/Algortihme de Condorcet/JavaDoc" key="destdir"/>
 				<item value="" key="href"/>
 			</section>
 		</section>

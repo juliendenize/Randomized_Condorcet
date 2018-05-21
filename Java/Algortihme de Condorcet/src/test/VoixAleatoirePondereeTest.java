@@ -18,7 +18,7 @@ public class VoixAleatoirePondereeTest {
 	
 	/**
 	 * Teste le constructeur {@link main.VoixAleatoirePonderee#VoixAleatoirePonderee(int, int, Voix[], int[])} en vérifiant que les probabilités
-	 * qu'une voix soit choisie suit bien la loi de probabilité donnée par le tableau de pourcentageParVoix en affichant le nombre de fois que
+	 * qu'une voix soit choisie suivent bien la loi de probabilité donnée par le tableau de pourcentageParVoix en affichant le nombre de fois que
 	 * chaque voix a été choisie </br>.
 	 * @see main.VoixAleatoirePonderee#VoixAleatoirePonderee(int, int, Voix[], int[])
 	 */

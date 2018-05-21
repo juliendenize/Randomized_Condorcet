@@ -16,8 +16,8 @@ public class VoixChoisie extends Voix {
 	/**
 	 * Constructeur VoixChoisie.
 	 * <p>
-	 * 	A la construction d'un objet VoixChoisie, l'idVotant, nbAlternatives et rangAltenratives sont fixées par le constructeur de la classe mère.<br>
-	 * 	rangAlternatives contiendra les bonnes valeurs après lecture de tous les choix de tous les votants à partir de la base de donnée.
+	 * 	A la construction d'un objet VoixChoisie, l'idVotant, nbAlternatives et rangAlternatives sont fixées par le constructeur de la classe mère.<br>
+	 * 	rangAlternatives contiendra les bonnes valeurs après lecture de tous les choix de tous les votants à partir de la base de données.
 	 * </p><br>
 	 * @param idVotant 
 	 * 				L'ID du votant.
@@ -43,7 +43,7 @@ public class VoixChoisie extends Voix {
  	}
 
  	/**
- 	 * Comportement d'un objet Voix sous la forme d'une chaine de caractère.
+ 	 * Comportement d'un objet Voix sous la forme d'une chaine de caractères.
  	 * Renvoie l'ID du votant et le classement des alternatives. <br>
  	 * @return Le classement des alternatives et l'ID du votant, sous la forme d'une chaîne de caractères.
  	 * @see VoixChoisie

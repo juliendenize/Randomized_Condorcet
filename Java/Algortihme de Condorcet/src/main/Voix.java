@@ -62,7 +62,7 @@ public class Voix {
 	}
 	
  	/**
- 	 * Comportement d'un objet Voix sous la forme d'une chaine de caractère.
+ 	 * Comportement d'un objet Voix sous la forme d'une chaine de caractères.
  	 * Renvoie l'ID du votant et le classement des alternatives. <br>
  	 * @return Le classement des alternatives et l'ID du votant, sous la forme d'une chaîne de caractères.
  	 * @see Voix

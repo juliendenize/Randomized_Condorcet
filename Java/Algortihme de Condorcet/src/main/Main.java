@@ -9,7 +9,7 @@ import main.DataBase;
  */
 public class Main {
 	/**
-	 * Méthode statique et est chargée en mémoire au démarrage de l'appli.<br>
+	 * Méthode statique, est chargée en mémoire au démarrage de l'appli.<br>
 	 * @param args
 	 */
 	public static void main(String[] var) throws Exception{

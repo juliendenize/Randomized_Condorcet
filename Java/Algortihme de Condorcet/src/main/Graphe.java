@@ -6,7 +6,7 @@ import java.util.Stack;
  * Elle est définie par:
  * <ul>
  * 	<li>Le nombre de noeuds du graphe.</li>
- * 	<li>La matrice d'adjancence du graphe.</li>
+ * 	<li>La matrice d'adjacence du graphe.</li>
  * 	<li>
  * </ul>
  * </p><br>
@@ -21,7 +21,7 @@ public class Graphe {
 	private int nbNoeuds;
 	
 	/**
-	 * Représente la matrice d'adjacence du graphe orienté: si matrice[0][1] = 1 alors 1 pointe vers 0 sinon si matrice[0][1] = 0.<br>
+	 * Représente la matrice d'adjacence du graphe orienté: si matrice[0][1] = 1 alors 1 pointe vers 0.<br>
 	 * Cette matrice n'est pas modifiable.
 	 */
 	private int[][] matrice;
@@ -41,9 +41,9 @@ public class Graphe {
 	
 	/**
 	 * <b>Génère la matrice.</b><br>
-	 * La méthode compare si pour chaque alternative i et j avec i != j, i a gagné plus de match par rapport à j.
+	 * La méthode compare si pour chaque alternative i et j avec i != j, i a gagné plus de matchs par rapport à j.
 	 * Lorsque c'est le cas on met un dans la matrice dans la case matrice[j][i].
-	 * Si ils ont gagné autant de match on laisse à zéro.<br>
+	 * Si ils ont gagné autant de matchs on laisse à zéro.<br>
 	 * @param compteur
 	 * 				Le compteur de matchs passé au constructeur.
 	 * @see Graphe#Graphe(int, int[][])
@@ -98,9 +98,9 @@ public class Graphe {
 	}
 	
 	/**
-	 * <b>Teste si le graphe contient un cycle en appliquant un parcous en profondeur pour chaque noeud.</b><br>
+	 * <b>Teste si le graphe contient un cycle en appliquant un parcours en profondeur pour chaque noeud.</b><br>
 	 * 	Si on arrive à retourner sur le noeud de départ il y a un cycle.  
-	 * @return Renvoie si il y a cycle sous forme de booléen, true si oui sinon non.
+	 * @return Renvoie si il y a cycle sous forme de booléen, true si oui, false sinon.
 	 * @see test.GrapheTest#testContientCycle()
 	 */
 	public boolean contientCycle() {
@@ -126,8 +126,8 @@ public class Graphe {
 	}
 	
 	/**
-	 * Compte le nombre de match Gagnés pour chaque alternative et le nombre total de victoires. <br> 
-	 * @return Renvoie un tableau d'entier contenant les matchs gagnés pour chaque alternative et le nombre total de matchs gagnés.
+	 * Compte le nombre de matchs gagnés pour chaque alternative et le nombre total de victoires. <br> 
+	 * @return Renvoie un tableau d'entiers contenant les matchs gagnés pour chaque alternative et le nombre total de matchs gagnés.
 	 * @see test.GrapheTest#testCompterNbMatchsGagnes()
 	 */
 	public int[] compterNbMatchsGagnes() {
@@ -146,7 +146,7 @@ public class Graphe {
 	/**
 	 * Retourne le nombre de noeuds du graphe et le vainqueur sous forme de chaîne de caractères.
 	 * @return 
-	 * 			Chaîne de caractère donnant nombre de noeuds et vainqueur.
+	 * 			Chaîne de caractères donnant nombre de noeuds et vainqueur.
 	 * @see test.GrapheTest#testToString()
 	 */
 	public String toString() {
