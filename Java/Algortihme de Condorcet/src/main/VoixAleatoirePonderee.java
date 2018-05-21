@@ -2,7 +2,7 @@ package main;
 import main.Condorcet;
 
 /**
- * <p><b>La classe VoixAleatoirePonderee représente une voix générée aléatoirement par sélection d'une voix parmis plusieurs par pourcentage
+ * <p><b>La classe VoixAleatoirePonderee représente une voix générée aléatoirement par sélection d'une voix parmi plusieurs par pourcentage
  * avec un idVotant pour la rendre unique.</b><br>
  * Elle est une classe fille de Voix et est définie par:
  * <ul>
@@ -19,7 +19,7 @@ public class VoixAleatoirePonderee extends Voix {
 	
 	/**
 	 * Constructeur de VoixAleatoirePonderee.<br>
-	 * Id votant, nbAlternatives fixés par le constructeur de la classe mère {@link Voix#Voix(int, int)}.<br>
+	 * idVotant, nbAlternatives fixés par le constructeur de la classe mère {@link Voix#Voix(int, int)}.<br>
 	 * @param idVotant
 	 * 				L'ID du votant.
 	 * @param nbAlternatives

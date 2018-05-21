@@ -73,8 +73,8 @@ public class VictoireParMatchsTest {
 	}
 	
 	/**
-	 * Teste la méthode {@link main.VictoireParMatchs#retournerVainqueur()} en vérifiant que les alternatives gagnantes sont bien celles attendus. Dans le cas où les
-	 * vainqueurs sont désignés par une loi de probabilité uniforme on compte sur 1000 élections combien de fois ils ont gagnés pour vérifier que la loi est uniforme.<br>
+	 * Teste la méthode {@link main.VictoireParMatchs#retournerVainqueur()} en vérifiant que les alternatives gagnantes sont bien celles attendues. Dans le cas où les
+	 * vainqueurs sont désignés par une loi de probabilité uniforme on compte sur 1000 élections combien de fois ils ont gagné pour vérifier que la loi est uniforme.<br>
 	 * @see main.VictoireParMatchs#retournerVainqueur()
 	 */
 	@Test

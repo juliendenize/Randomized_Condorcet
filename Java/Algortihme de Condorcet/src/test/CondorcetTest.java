@@ -93,7 +93,7 @@ public class CondorcetTest {
 
 	}
 	
-	/**Teste la méthode {@link main.Condorcet#retournerCompteur()} en comparant pour chaque élections le nombre de matchs gagnés par alternative comptabilisés par
+	/**Teste la méthode {@link main.Condorcet#retournerCompteur()} en comparant pour chaque élection le nombre de matchs gagnés par alternative comptabilisés par
 	 * l'algorithme et celui attendu.<br>
 	 * @see main.Condorcet#retournerCompteur()
 	 */
@@ -127,7 +127,7 @@ public class CondorcetTest {
 	
 	/**
 	 * Teste la méthode {@link main.Condorcet#donnerNbAleatoire(int, int)} en testant plusieurs centaines de fois si le nombre aléatoire est bien dans la plage demandée
-	 * en faisant également variée cette plage de données d'un petit écart à un grand.<br>
+	 * en faisant également varier cette plage de données d'un petit écart à un grand.<br>
 	 * @see main.Condorcet#donnerNbAleatoire(int, int)
 	 */
 	@Test
@@ -144,8 +144,8 @@ public class CondorcetTest {
 	}
 	
 	/**
-	 * Teste la méthode {@link main.Condorcet#elireLeVainqueur()}. Comme chaque élection est différente, tous les cas de figures sont testés. Concernant les élections
-	 * où le vainqueur est élue par une loi de probabilité on teste 1000 fois l'algorithme en comptant combien de fois chaque alternative est élue pour savoir si les
+	 * Teste la méthode {@link main.Condorcet#elireLeVainqueur()}. Comme chaque élection est différente, tous les cas de figure sont testés. Concernant les élections
+	 * où le vainqueur est élu par une loi de probabilité on teste 1000 fois l'algorithme en comptant combien de fois chaque alternative est élue pour savoir si les
 	 * probabilités sont bien respectées.<br>
 	 * @see main.Condorcet#elireLeVainqueur()
 	 */
@@ -185,7 +185,7 @@ public class CondorcetTest {
 	}
 
 	/**
-	 * Teste la méthode {@link main.Condorcet#toString()}. Elle compare pour une élection connue la chaîne de caractère attendue et ce que l'élection renvoie.<br>
+	 * Teste la méthode {@link main.Condorcet#toString()}. Elle compare pour une élection connue la chaîne de caractères attendue et ce que l'élection renvoie.<br>
 	 * @see main.Condorcet#toString()
 	 */
 	@Test

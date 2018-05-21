@@ -1,6 +1,6 @@
 package main;
 /**
- * <p><b>La classe VoixAleatoire représente la voix généré aléatoirement avec un idVotant pour la rendre unique.</b><br>
+ * <p><b>La classe VoixAleatoire représente la voix générée aléatoirement avec un idVotant pour la rendre unique.</b><br>
  * Elle est une classe fille de Voix et est définie par:
  * <ul>
  * 	<li>L'ID du votant représenté par la voix.</li>
@@ -33,7 +33,7 @@ public class VoixAleatoire extends Voix {
 	
 	/**
 	 * <b>Génère le rang de chaque alternative pour remplir le tableau rangAlternative.</b><br>
-	 * La méthode créé un tableau pioche de taille (nbAlternatives + 1) avec pioche[i] = i.<br>
+	 * La méthode crée un tableau pioche de taille (nbAlternatives + 1) avec pioche[i] = i.<br>
 	 * Le tableau pioche permet de stocker les rangs qui n'ont pas encore été tirés.<br>
 	 * Boucle for (pioche[0] = nbAlternatives; pioche[0] > 0; i++):
 	 * <ul>
@@ -46,7 +46,7 @@ public class VoixAleatoire extends Voix {
 	 * 	</li>
 	 * </ul>
 	 * <br>
-	 *  A la fin de la méthode le classement est bien réalisé même si les nombres ne sont pas nécessairement consécutifs cela n'entraine pas de problèmes.<br>
+	 *  A la fin de la méthode le classement est bien réalisé même si les nombres ne sont pas nécessairement consécutifs cela n'entraine pas de problème.<br>
 	 *  @see VoixAleatoire#rangAlternatives
 	 *  @see Condorcet#parcourirLesVoix()
 	 */

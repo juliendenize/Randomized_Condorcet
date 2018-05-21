@@ -6,7 +6,7 @@ package main;
  */
 public class Main {
 	/**
-	 * Méthode statique et est chargée en mémoire au démarrage de l'appli.<br>
+	 * Méthode statique, est chargée en mémoire au démarrage de l'appli.<br>
 	 * @param args
 	 */
 	static public void main (String[] args) {

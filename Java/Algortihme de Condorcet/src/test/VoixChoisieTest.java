@@ -27,7 +27,7 @@ public class VoixChoisieTest {
 	}
 
 	/**
-	 * Teste la méthode {@link main.Voix#toString()}en comparant la chaîne attendu avec le toString renvoyée par la voix.<br>
+	 * Teste la méthode {@link main.Voix#toString()} en comparant la chaîne attendue avec le toString renvoyé par la voix.<br>
 	 * @see main.Voix#toString()
 	 */
 	@Test
