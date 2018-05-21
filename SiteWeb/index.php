@@ -1,60 +1,98 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Accueil</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<?php
+/**
+  * Routeur du site web.
+  *
+  * La variable $_GET['action'] permet de trouver le bon controller à inclure afin de
+  * traiter correctement la requête du client.
+**/
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+session_start();
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+if(isset($_GET['action'])) {
+  $action = $_GET['action'];
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  if($action == 'inscription') {
+    //appelle le controller pour s'inscrire
+    require('./controller/controllerInscription.php');
+    if(isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['motDePasse'])) {
+      postInscrire();
+    }
+    else getInscrire();
+  }
 
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<style type="text/css">
-		body { padding-top: 70px; }
-	</style>
+  elseif($action == 'connexion' || $action == 'deconnexion') {
+    //appelle le controller pour se connecter.
+    require('./controller/controllerConnexion.php');
+    if($action == 'deconnexion'){
+      faireDeconnecter();
+    }
+    else {
+      if(isset($_POST['email']) && isset($_POST['motDePasse'])){
+        postConnexion();
+      }
+      else {
+        getConnexion();
+      }
+    }
+  }
 
-</head>
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.php">Vote à la Condorcet</a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-				<ul class="nav navbar-nav">
-					<li class="active"> <a href="index.php">Accueil</a></li>
-					<li> <a href="running_votes.php">Votes en cours</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li> <a href="connexion.php">Connexion</a></li>
-					<li> <a href="inscription.php">Inscription</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+  elseif($action == 'nouveauVote') {
+    //appelle le controlleur pour créer un nouveau vote.
+    require('./controller/controllerNouveauVote.php');
+    if(isset($_POST['nbAlternatives'])){
+       getNouveauVote();
+    }
+    elseif(isset($_POST['titre']) && isset($_POST['description']) && isset($_POST['type']) &&
+           isset($_SESSION['nbAlternatives']) && isset($_POST['dateDebut']) &&
+           isset($_POST['dateFin'])) {
+      postNouveauVote();
+    }
+    else getNouveauVoteNb();
+  }
 
-	<div class="container">
-		<a href="new_vote_nb.php" class="btn btn-default" title="Créer un nouveau vote">Nouveau vote</a>
-		<a href="running_votes.php" class="btn btn-default" title="Votes en cours">Votes en cours</a>
+  elseif($action == 'tousLesVotes') {
+    //appelle le controleur pour gérer les votes en cours.
+    require('./controller/controllerTousLesVotes.php');
+    getTousLesVotes();
+  }
 
-		<h2>La méthode de Condorcet, qu'est-ce que c'est ?</h2>
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/wKimU8jy2a8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  elseif($action == 'consulterVote' || $action == 'voter' || $action == "fermerVote" || $action == "resultat") {
+    if(isset($_GET['idVote'])) {
+      //appelle le controlleur pour gérer un vote.
+      if($action == 'consulterVote') {
+        require('./controller/controllerVote.php');
+        getVote();
+      }
+      elseif($action == 'voter') {
+        require('./controller/controllerVoter.php');
+        if(isset($_POST['alternative1'])) postVoter();
+        else getVoter();
+      }
+      elseif($action == 'resultat') {
+        require('./controller/controllerResultat.php');
+        getResultat();
+      }
+      else {
+        require('./controller/controllerVote.php');
+        fermerVote();
+      }
+    }
+    else header("Location: index.php?action=erreur&erreur=donnerVote");
+  }
 
-		<footer>
-			<a href="mailto:estelle.canovas@telecom-sudparis.eu">Nous contacter</a>
-		</footer>
-	
-	</div>
-</body>
-</html>
+  elseif($action == 'erreur') {
+    if(isset($_GET['erreur'])){
+      if('erreur' == 'donnerVote') {
+        echo 'Donner un ID de vote.';
+      }
+    }
+    else echo 'Il y a eu une erreur.';
+    require('./view/bienvenue.php');
+  }
+
+  //redirige vers le routeur sans action pour afficher la page d'accueil.
+  else header('Location: index.php');
+}
+
+//inclut la page d'accueil.
+else require('./view/bienvenue.php');
