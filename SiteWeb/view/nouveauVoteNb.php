@@ -11,7 +11,7 @@ $titre = 'Nouveau vote' ?>
 	<form method="post" action="/SiteWeb/index.php?action=nouveauVote">
 		<p>
 			<label for="nbAlternatives">Entrez le nombre de choix que vous voulez ajouter au vote : </label>
-			<input type="number" min="0" max="10" name="nbAlternatives" id="nbAlternatives" placeholder="2" autofocus required>
+			<input type="number" min="2" max="10" name="nbAlternatives" id="nbAlternatives" placeholder="2" autofocus required>
 		</p>
 
 		<p>

@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li> <a href="/SiteWeb/index.php">Accueil</a></li>
-            <li> <a href="/SiteWeb/index.php?action=tousLesVotes">Votes en cours</a></li>
+            <li> <a href="/SiteWeb/index.php?action=tousLesVotes">Tous les votes</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
 					<?php

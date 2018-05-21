@@ -7,7 +7,7 @@ $titre = 'Accueil' ?>
 <?php ob_start(); ?>
 	<div class="container">
 		<a href="/SiteWeb/index.php?action=nouveauVote" class="btn btn-default" title="Créer un nouveau vote">Nouveau vote</a>
-		<a href="/SiteWeb/index.php?action=tousLesVotes" class="btn btn-default" title="Votes en cours">Votes en cours</a>
+		<a href="/SiteWeb/index.php?action=tousLesVotes" class="btn btn-default" title="Tous les votes">Tous les votes</a>
 
 		<h2>La méthode de Condorcet, qu'est-ce que c'est ?</h2>
 		<p>La méthode de Condorcet est un système de votes avec lequel le vote ne se fait pas en choisissant un gagnant mais en <strong>ordonnant</strong> les différentes alternatives possibles. Les opinions pris en compte sont donc plus larges, et le vote se veut plus représentatif, et plus <strong>démocratique</strong>.</p>

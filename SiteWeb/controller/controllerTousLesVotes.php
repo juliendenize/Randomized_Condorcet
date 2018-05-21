@@ -15,7 +15,7 @@ require_once('./model/Inscrit.php');
 **/
 function getTousLesVotes() {
   if(isset($_SESSION['pseudo'])) {
-    $votes = Vote::recupererVotes(new Inscrit($_SESSION['connexion']));
+    $votes = Vote::recupererVotes(new Inscrit($_SESSION['pseudo']));
   }
   else $votes = Vote::recupererVotes();
   require('./view/tousLesVotes.php');

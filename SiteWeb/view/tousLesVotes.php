@@ -2,11 +2,11 @@
 /**
 	* @author Estelle
 **/
-$titre = 'Votes en cours' ?>
+$titre = 'Tous les votes' ?>
 
 <?php ob_start(); ?>
 	<div class="container">
-		<h1>Votes en cours</h1>
+		<h1>Tous les votes</h1>
 		<p>
 	<?php if ($votes != null){ ?>
 		<table class="table table-striped">
