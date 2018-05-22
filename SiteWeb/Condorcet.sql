@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 21 mai 2018 à 22:29
+-- Généré le :  mar. 22 mai 2018 à 03:21
 -- Version du serveur :  10.1.30-MariaDB
 -- Version de PHP :  7.2.1
 
@@ -41,14 +41,19 @@ CREATE TABLE `Alternatives` (
 INSERT INTO `Alternatives` (`id`, `idVote`, `nom`) VALUES
 (1, 3, 'Julien'),
 (1, 4, 'Test1'),
-(1, 5, 'Chocolas'),
+(1, 5, 'Chocolat'),
 (1, 7, 'Choix1'),
+(1, 8, 'Choix1'),
+(1, 9, 'Choix test 1'),
 (2, 3, 'Estelle'),
 (2, 4, 'Test2'),
 (2, 5, 'Banane'),
 (2, 7, 'Choix2'),
+(2, 8, 'Choix2'),
+(2, 9, 'Choix test 2'),
 (3, 4, 'Test3'),
 (3, 5, 'CordonBleu'),
+(3, 8, 'CordonBleu'),
 (4, 4, 'Test4'),
 (4, 5, 'Cuilliere');
 
@@ -72,8 +77,15 @@ CREATE TABLE `ChoixPrives` (
 INSERT INTO `ChoixPrives` (`idInscrit`, `idVote`, `idAlternative`, `rang`) VALUES
 (8, 4, 3, 3),
 (8, 4, 4, 1),
+(8, 9, 1, 1),
+(8, 9, 2, 3),
 (9, 4, 3, 2),
-(9, 4, 4, 1);
+(9, 4, 4, 1),
+(10, 7, 1, 3),
+(10, 7, 2, 2),
+(10, 8, 1, 2),
+(10, 8, 2, 1),
+(10, 8, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -115,7 +127,8 @@ CREATE TABLE `Inscrits` (
 
 INSERT INTO `Inscrits` (`id`, `pseudo`, `email`, `motDePasse`) VALUES
 (8, 'Julien', 'jdenize@free.fr', 'f30ecbf5b1cb85c631fdec0b39678550973cfcbc'),
-(9, 'Estelle', 'estelle@free.fr', 'f30ecbf5b1cb85c631fdec0b39678550973cfcbc');
+(9, 'Estelle', 'estelle@free.fr', 'f30ecbf5b1cb85c631fdec0b39678550973cfcbc'),
+(10, 'Remi', 'remi@free.fr', 'f30ecbf5b1cb85c631fdec0b39678550973cfcbc');
 
 -- --------------------------------------------------------
 
@@ -133,8 +146,9 @@ CREATE TABLE `Resultats` (
 --
 
 INSERT INTO `Resultats` (`idVote`, `idAlternative`) VALUES
-(3, 1),
-(5, 1);
+(5, 1),
+(9, 1),
+(8, 2);
 
 -- --------------------------------------------------------
 
@@ -170,10 +184,12 @@ CREATE TABLE `Votes` (
 --
 
 INSERT INTO `Votes` (`id`, `titre`, `description`, `type`, `nbAlternatives`, `dateDebut`, `dateFin`, `statut`, `idAdmin`) VALUES
-(3, 'Test', 'Vote test', 'public', 2, '2222-02-22', '4444-04-04', 'ferme', 8),
+(3, 'Test', 'Vote test', 'public', 2, '2222-02-22', '4444-04-04', 'ouvert', 8),
 (4, 'Test2', 'Test numéro 2', 'public', 4, '1111-02-02', '2222-02-22', 'ouvert', 8),
-(5, 'Test3', 'TESTTTT', 'public', 4, '1111-11-11', '1111-11-11', 'ferme', 9),
-(7, 'Test5', 'Nouveau test', 'prive', 2, '1111-11-11', '2222-02-22', 'ouvert', 9);
+(5, 'Test3', 'Test numéro 3', 'public', 4, '1111-11-11', '1111-11-11', 'ferme', 9),
+(7, 'Test5', 'Nouveau test parce que j\'ai envie de faire un superbe test car j\'adore faire des test youhouhouhou', 'prive', 2, '1111-11-11', '2222-02-22', 'ouvert', 9),
+(8, 'Test numéro idk', 'Bonjour je m\'appelle Rémi', 'public', 3, '1111-11-11', '2222-02-22', 'ferme', 10),
+(9, 'Test 90', 'C\'est un nouveau vote test le 90 même', 'prive', 2, '2222-02-22', '1111-11-11', 'ferme', 8);
 
 --
 -- Index pour les tables déchargées
@@ -237,13 +253,13 @@ ALTER TABLE `Votes`
 -- AUTO_INCREMENT pour la table `Inscrits`
 --
 ALTER TABLE `Inscrits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT pour la table `Votes`
 --
 ALTER TABLE `Votes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Contraintes pour les tables déchargées

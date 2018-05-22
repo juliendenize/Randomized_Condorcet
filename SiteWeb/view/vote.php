@@ -6,31 +6,31 @@ $titre = "Consultation Vote"; ?>
 
 <?php ob_start(); ?>
 	<div class="container">
-		<h1><?php echo htmlspecialchars($vote->titre); ?></h1>
+		<h1>Titre: <?php echo htmlspecialchars($vote->titre); ?></h1>
 
 		<div class="text-center">
-			<p><?php echo htmlspecialchars($vote->dateDebut); ?></p>
-			<p><?php echo htmlspecialchars($vote->dateFin); ?></p>
-			<p><?php echo htmlspecialchars($vote->idAdmin); ?></p>
+			<p>Date début: <?php echo htmlspecialchars($vote->dateDebut); ?></p>
+			<p>Date fin: <?php echo htmlspecialchars($vote->dateFin); ?></p>
+			<p>Nom administrateur: <?php echo htmlspecialchars($nomAdmin); ?></p>
 
 		<?php
 		if ($vote->type == "public")
 		{
 			?>
-			<div class="text-right">Public</div>
+			<div class="text-center">Vote public</div>
 			<?php
 		}
 		else
 		{
 			?>
-			<div class="text-right">Privé</div>
+			<div class="text-center">Vote privé</div>
 			<?php
 		}
 		?>
 
 		</div>
 
-		<h4><?php echo htmlspecialchars($vote->description); ?></h4>
+		<h4>Description du vote: <?php echo htmlspecialchars($vote->description); ?></h4>
 
 		<h3>Alternatives : </h3>
 
@@ -41,7 +41,7 @@ $titre = "Consultation Vote"; ?>
 					<?php echo htmlspecialchars($alternative->nom); ?>
 				</p>
 		<?}?>
-
+		<a class="btn btn-default" href="/SiteWeb/index.php?action=voter&amp;idVote=<?php echo htmlspecialchars($vote->id); ?>" role="button">Voter</a>
 	</div>
 <?php $contenu = ob_get_clean(); ?>
 

@@ -6,11 +6,11 @@ $titre = 'Accueil'; ?>
 
 <div class="container">
 
-	<h1>Résultats du vote : <?php echo htmlspecialchars($vote->titre); ?></h1>
-	<h3><?php echo htmlspecialchars($vote->description); ?></h3>
+	<h1>Résultat du vote : <?php echo htmlspecialchars($vote->titre); ?></h1>
+	<h3>Description du vote: <?php echo htmlspecialchars($vote->description); ?></h3>
 	<?php
 		if ($vote->statut == "ferme"){ ?>
-		<p>Après un grand suspense, le vainqueur de ce vote est : <?php echo htmlspecialchars($nomVainqueur); ?>.</p>
+		<p>Après un grand suspense, le vainqueur de ce vote est : <strong><?php echo htmlspecialchars($nomVainqueur); ?></strong>.</p>
 
 		<p>Les autres alternatives étaient :
 		<?php foreach ($alternatives as $alternative) {

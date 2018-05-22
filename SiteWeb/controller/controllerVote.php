@@ -21,6 +21,7 @@ function getVote() {
   $vote = new Vote($id, null, null, null, null, null, null, null, null);
   if($vote->existeVote($id)) {
     require('./model/Alternative.php');
+    $nomAdmin = $vote->getAdmin();
     if($vote->type == 'public') {
       $alternatives = Alternative::recupererAlternatives($vote);
       require('./view/vote.php');
