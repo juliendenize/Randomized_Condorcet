@@ -10,7 +10,7 @@ import main.Condorcet;
  * 	<li>Le nombre d'alternatives du vote.</li>
  * 	<li>Le rang des alternatives.</li>
  * </ul>
- * </p><br>
+ * <br>
  * @author julien
  * @see test.VoixAleatoirePondereeTest
  */
@@ -39,6 +39,8 @@ public class VoixAleatoirePonderee extends Voix {
 	/**
 	 * Choisit une voix de tableauVoix selon pourcentageVoix.<br>
 	 * @see test.VoixAleatoirePondereeTest#testVoixAleatoirePonderee()
+	 * @param tableauVoix Le tableau des voix possible à générer.
+	 * @param pourcentageParVoix Le pourcentage de chances de choisir par voix.
 	 */
 	private void genererVoix(Voix[] tableauVoix, int[] pourcentageParVoix){
 		int nbAleatoire = Condorcet.donnerNbAleatoire(1, 100);

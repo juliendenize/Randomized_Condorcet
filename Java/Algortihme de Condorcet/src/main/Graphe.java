@@ -9,7 +9,7 @@ import java.util.Stack;
  * 	<li>La matrice d'adjacence du graphe.</li>
  * 	<li>
  * </ul>
- * </p><br>
+ * <br>
  * @author julien
  * @see test.GrapheTest
  */

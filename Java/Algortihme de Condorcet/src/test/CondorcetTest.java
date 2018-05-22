@@ -53,7 +53,8 @@ public class CondorcetTest {
 	 * 	<li>Cycle présent donc désignation par loi pondérée par les matchs.</li>
 	 * 	<li>Vainqueur par nombre maximum de matchs gagnés.</li>
 	 * 	<li>Vainqueur désigné par les alternatives en tête (même nombre de matchs maximums gagnés).</li>
-	 * @throws Exception
+	 * </ul>
+	 * @throws Exception s'il y a une erreur renvoie une exception
 	 * @see main.VoixChoisie
 	 * @see main.VoixChoisie#ajouterUnChoix(int, int)
 	 */

@@ -11,7 +11,7 @@ import java.util.LinkedList;
  * 	<li>Le gagnant de l'élection ou le "vainqueur de Condorcet"</li>
  * 	<li>Le graphe des victoires des alternatives</li>
  * </ul>
- * </p><br>
+ * <br>
  * @author julien
  * @see test.CondorcetTest
  */
@@ -84,7 +84,7 @@ public class Condorcet {
 	/**
 	 * <b>Remplit le tableau compteur</b> en regardant pour chaque voix comment sont classées les alternatives pour matcher les candidats. <br>
 	 * La méthode parcourt les voix. <br>
-	 * Elle parcourt pour chaque voix le tableau classement en <b>comparant pour chaque alternative i son rang par rapport aux alternatives j</b> avec j > i. <br>
+	 * Elle parcourt pour chaque voix le tableau classement en <b>comparant pour chaque alternative i son rang par rapport aux alternatives j</b> avec j supérieur i. <br>
 	 * Lorsque que le <b>rang de i est supérieur au rang de j elle incrémente compteur[j][i] de 1</b>. <br>
 	 * Si le rang de i ou de j est égal à 0, elle ne fait rien car cela signifie que l'<b>alternative de rang 0 n'a pas été classée par le votant</b>.<br>
 	 * @see Condorcet#toutesLesVoix
@@ -134,7 +134,7 @@ public class Condorcet {
 	 * La probabilité pour une alternative i d'être choisie est le nombre de matchs qu'elle a gagné sur le nombre de matchs gagnés totaux.
 	 * La méthode choisit un nombre aléatoire entre 1 et le nombre de matchs gagnés au total.
 	 * ELle somme le nombre de matchs gagnés pour chaque alternative jusqu'à arriver au nombre aléatoire ce qui désigne l'alternative gagnante.<br>
-	 * @param nbMatchsGagnes
+	 * @param nbMatchsGagnes Le tableau des matchs gagnés pour chaque alternative
 	 * 					
 	 */
 	private void designerVainqueurRandomise(int[] nbMatchsGagnes) {

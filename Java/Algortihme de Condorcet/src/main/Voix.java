@@ -9,7 +9,7 @@ package main;
  * 	<li>Le nombre d'alternatives du vote.</li>
  * 	<li>Le rang des alternatives.</li>
  * </ul>
- * </p><br>
+ * <br>
  * @author julien
  * @see VoixChoisie
  * @see VoixAleatoire

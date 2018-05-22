@@ -7,7 +7,7 @@ package main;
  * 	<li>Le nombre d'alternatives du vote.</li>
  * 	<li>Le rang des alternatives.</li>
  * </ul>
- * </p><br>
+ * <br>
  * @author julien
  * @see test.VoixAleatoireTest
  */
@@ -35,7 +35,7 @@ public class VoixAleatoire extends Voix {
 	 * <b>Génère le rang de chaque alternative pour remplir le tableau rangAlternative.</b><br>
 	 * La méthode crée un tableau pioche de taille (nbAlternatives + 1) avec pioche[i] = i.<br>
 	 * Le tableau pioche permet de stocker les rangs qui n'ont pas encore été tirés.<br>
-	 * Boucle for (pioche[0] = nbAlternatives; pioche[0] > 0; i++):
+	 * Boucle for (pioche[0] = nbAlternatives; pioche[0] supérieur à 0; i++):
 	 * <ul>
 	 * 	<li>Génère un nombre aléatoire compris dans l'intervalle [0, pioche[0]].</li>
 	 * 	<li>On remplit rangAlternatives[pioche[0]-1] suivant le nbAleatoire:
@@ -43,7 +43,6 @@ public class VoixAleatoire extends Voix {
 	 * 			<b>	si nbAleatoire = pioche[0]: pioche[nbAleatoire]</b>.<br>
 	 * 			<b>	sinon: pioche[nbAleatoire] et pioche[nbAleatoire] = pioche[pioche[0]]</b> afin de garder le rang qui n'a pas été tiré.<br></p>
 	 * 		Dans le cas où nbAleatoire = 0 comme on décrémente ensuite pioche[0] on perd le rang représenté par pioche[pioche[0]]</li>
-	 * 	</li>
 	 * </ul>
 	 * <br>
 	 *  A la fin de la méthode le classement est bien réalisé même si les nombres ne sont pas nécessairement consécutifs cela n'entraine pas de problème.<br>

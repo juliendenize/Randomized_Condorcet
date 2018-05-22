@@ -13,7 +13,7 @@ import main.Condorcet;
  * 	<li>Le nombre de vainqueurs potentiels.</li>
  * 	<li>Le nombre d'alternatives.</li>
  * </ul>
- * </p><br>
+ * <br>
  * @author julien
  * @see test.VictoireParMatchsTest
  */
