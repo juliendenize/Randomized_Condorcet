@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  mar. 22 mai 2018 à 03:21
+-- Généré le :  mar. 22 mai 2018 à 20:11
 -- Version du serveur :  10.1.30-MariaDB
 -- Version de PHP :  7.2.1
 
@@ -45,17 +45,30 @@ INSERT INTO `Alternatives` (`id`, `idVote`, `nom`) VALUES
 (1, 7, 'Choix1'),
 (1, 8, 'Choix1'),
 (1, 9, 'Choix test 1'),
+(1, 10, '1'),
+(1, 13, 'Choix 1'),
+(1, 18, 'TSP'),
+(1, 19, 'Choix test 1'),
 (2, 3, 'Estelle'),
 (2, 4, 'Test2'),
 (2, 5, 'Banane'),
 (2, 7, 'Choix2'),
 (2, 8, 'Choix2'),
 (2, 9, 'Choix test 2'),
+(2, 10, '2'),
+(2, 13, 'Choix 2'),
+(2, 18, 'Ensimag'),
+(2, 19, 'Choix test 2'),
 (3, 4, 'Test3'),
 (3, 5, 'CordonBleu'),
 (3, 8, 'CordonBleu'),
+(3, 10, '3'),
+(3, 13, 'Choix 3'),
+(3, 18, 'INSA Lyon'),
+(3, 19, 'Choix test 3'),
 (4, 4, 'Test4'),
-(4, 5, 'Cuilliere');
+(4, 5, 'Cuilliere'),
+(4, 19, 'Choix test 4');
 
 -- --------------------------------------------------------
 
@@ -75,17 +88,15 @@ CREATE TABLE `ChoixPrives` (
 --
 
 INSERT INTO `ChoixPrives` (`idInscrit`, `idVote`, `idAlternative`, `rang`) VALUES
-(8, 4, 3, 3),
+(8, 4, 1, 3),
+(8, 4, 2, 1),
+(8, 4, 3, 2),
 (8, 4, 4, 1),
-(8, 9, 1, 1),
-(8, 9, 2, 3),
-(9, 4, 3, 2),
+(8, 7, 1, 2),
+(8, 7, 2, 1),
 (9, 4, 4, 1),
-(10, 7, 1, 3),
-(10, 7, 2, 2),
-(10, 8, 1, 2),
-(10, 8, 2, 1),
-(10, 8, 3, 4);
+(9, 7, 1, 1),
+(9, 7, 2, 2);
 
 -- --------------------------------------------------------
 
@@ -105,8 +116,10 @@ CREATE TABLE `ChoixPublics` (
 --
 
 INSERT INTO `ChoixPublics` (`idVotant`, `idVote`, `idAlternative`, `rang`) VALUES
-(1, 7, 1, 2),
-(1, 7, 2, 4);
+(1, 4, 1, 1),
+(1, 4, 2, 2),
+(1, 4, 3, 3),
+(1, 4, 4, 4);
 
 -- --------------------------------------------------------
 
@@ -146,9 +159,8 @@ CREATE TABLE `Resultats` (
 --
 
 INSERT INTO `Resultats` (`idVote`, `idAlternative`) VALUES
-(5, 1),
-(9, 1),
-(8, 2);
+(4, 2),
+(7, 2);
 
 -- --------------------------------------------------------
 
@@ -185,11 +197,15 @@ CREATE TABLE `Votes` (
 
 INSERT INTO `Votes` (`id`, `titre`, `description`, `type`, `nbAlternatives`, `dateDebut`, `dateFin`, `statut`, `idAdmin`) VALUES
 (3, 'Test', 'Vote test', 'public', 2, '2222-02-22', '4444-04-04', 'ouvert', 8),
-(4, 'Test2', 'Test numéro 2', 'public', 4, '1111-02-02', '2222-02-22', 'ouvert', 8),
-(5, 'Test3', 'Test numéro 3', 'public', 4, '1111-11-11', '1111-11-11', 'ferme', 9),
-(7, 'Test5', 'Nouveau test parce que j\'ai envie de faire un superbe test car j\'adore faire des test youhouhouhou', 'prive', 2, '1111-11-11', '2222-02-22', 'ouvert', 9),
-(8, 'Test numéro idk', 'Bonjour je m\'appelle Rémi', 'public', 3, '1111-11-11', '2222-02-22', 'ferme', 10),
-(9, 'Test 90', 'C\'est un nouveau vote test le 90 même', 'prive', 2, '2222-02-22', '1111-11-11', 'ferme', 8);
+(4, 'Test2', 'Test numéro 2', 'public', 4, '1111-02-02', '2222-02-22', 'ferme', 8),
+(5, 'Test3', 'Test numéro 3', 'public', 4, '1111-11-11', '1111-11-11', 'ouvert', 9),
+(7, 'Test5', 'Nouveau test parce que j\'ai envie de faire un superbe test car j\'adore faire des test youhouhouhou', 'prive', 2, '1111-11-11', '2222-02-22', 'ferme', 9),
+(8, 'Test numéro idk', 'Bonjour je m\'appelle Rémi', 'public', 3, '1111-11-11', '2222-02-22', 'ouvert', 10),
+(9, 'Test 90', 'C\'est un nouveau vote test le 90 même', 'prive', 2, '2222-02-22', '1111-11-11', 'ouvert', 8),
+(10, 'Hello', 'Bonjour ceci est un test', 'public', 3, '1111-11-11', '0222-02-22', 'ouvert', 8),
+(13, 'Test56', 'Bonjour ceci est encore un test', 'public', 3, '2222-02-22', '3333-03-31', 'ouvert', 9),
+(18, 'Meilleur école ?', 'Quelle est la meilleur école ?', 'prive', 3, '1111-11-11', '2222-02-22', 'ouvert', 8),
+(19, 'Nouveau test', 'Bonjour un petit test encore.', 'prive', 4, '3333-03-31', '4444-04-04', 'ouvert', 10);
 
 --
 -- Index pour les tables déchargées
@@ -259,7 +275,7 @@ ALTER TABLE `Inscrits`
 -- AUTO_INCREMENT pour la table `Votes`
 --
 ALTER TABLE `Votes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Contraintes pour les tables déchargées

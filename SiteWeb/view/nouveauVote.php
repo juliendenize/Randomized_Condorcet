@@ -11,7 +11,7 @@ $titre = 'Nouveau vote' ?>
 
 		<p>
 			<label for="titre">Titre du vote : </label>
-			<input type="text" name="titre" required autofocus>
+			<input type="text" name="titre" maxlength="20" required autofocus>
 		</p>
 		<p>
 			<label for="description">Pouvez-vous décrire votre vote ?</label><br />

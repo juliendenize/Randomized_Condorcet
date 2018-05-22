@@ -45,6 +45,7 @@ function postNouveauVote() {
     header('Location: index.php?erreur=titre');
   }
   else {
+    echo $vote->type;
     require('./model/Alternative.php');
     $vote->ajouterVote();
     $vote->initialiseIdVote();
