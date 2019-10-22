@@ -1,4 +1,6 @@
-Système de vote électronique à la Condorcet randomisé
+# Système de vote électronique à la Condorcet randomisé
+
+## Contexte
 
 Notre projet a pour but de proposer une plateforme web permettant aux utilisateurs de créer et voter pour des scrutins de Condorcet randomisé.
 
@@ -13,4 +15,16 @@ Concernant les modalités du vote, le votant classe les différentes alternative
 Du point de vue administrateur le déroulement d’un vote consiste à définir l’objet du vote, les différents choix, la date exacte de clôture du vote. Il obtient le résultat final du vote à l’issue de cette date.
 Du point de vue utilisateur, le déroulement du vote consiste à y accéder soit par un lien soit en parcourant les votes qui lui sont accessibles (publics ou privés) puis de voter selon ses préférences.
 Enfin, la sécurisation des votes est un point clé de notre projet mais notre manque de connaissance sur ce domaine nous oblige à nous informer dessus avant de suivre une stratégie de sécurisation. 
+
+## Partie Java
+
+Le dossier `Java/` contient tout le code permettant de représenter un scrutin de Condorcet et d'élire un vainqueur. Les votes sont récupérés depuis une BDD.
+
+## Partie Web
+
+Le dossier `SiteWeb/` contient le site web from Scratch en PHP, Bootstrap3 simple permettant de créer des scrutins de Condorcet.
+
+## Rapport
+
+Le fichier `PRO - Rapport final.pdf` contient de le rapport décrivant tout ce qui a été effectué dans le projet et ce qu'il restait à faire si on avait eu plus de temps avec des pistes d'amélioration.
 
