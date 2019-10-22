@@ -26,5 +26,5 @@ Le dossier `SiteWeb/` contient le site web from Scratch en PHP, Bootstrap3 simpl
 
 ## Rapport
 
-Le fichier `PRO - Rapport final.pdf` contient de le rapport décrivant tout ce qui a été effectué dans le projet et ce qu'il restait à faire si on avait eu plus de temps avec des pistes d'amélioration.
+Le fichier `PRO - Rapport final.pdf` contient le rapport décrivant tout ce qui a été effectué dans le projet et ce qu'il restait à faire si on avait eu plus de temps avec des pistes d'amélioration.
 
